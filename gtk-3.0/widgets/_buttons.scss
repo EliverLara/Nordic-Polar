@@ -198,7 +198,7 @@ button {
     &:backdrop { @include button(osd-backdrop); }
 
     &.flat {
-      @include button(undecorated);
+      @include button(normal-header);
 
       box-shadow: none; //FIXME respect no edge on the button mixin
       text-shadow: 0 1px black;
