@@ -2880,8 +2880,8 @@ row {
  *********/
 menubar,
 .menubar {
-  background-color: #e5e9f0;
-  color: #3b4252;
+  background-color: #2e3440;
+  color: #d8dee9;
   -GtkWidget-window-dragging: true;
   padding: 0px;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1); }
@@ -4031,14 +4031,14 @@ treeview ~ scrollbar.vertical {
     .sidebar row label {
       color: #98abb2; }
     .sidebar row:selected {
-      color: #fff; }
+      color: #fefefe; }
       .sidebar row:selected:backdrop {
-        color: rgba(129, 161, 193, 0.6);
-        background: transparent; }
+        color: #fefefe;
+        background: rgba(129, 161, 193, 0.6); }
         .sidebar row:selected:backdrop label {
-          color: #fff; }
+          color: #fefefe; }
       .sidebar row:selected label {
-        color: #fff; }
+        color: #fefefe; }
   .sidebar.source-list {
     background: #e5e9f0;
     padding: 4px 0px; }
