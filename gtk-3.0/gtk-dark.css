@@ -538,11 +538,12 @@ button {
   .osd
   button.flat {
     color: #d8dee9;
-    border-radius: 4px;
-    text-shadow: none;
-    box-shadow: none;
-    border: 1px solid #1f232b;
-    background-color: #282d37;
+    border-color: #1f232b;
+    background-color: rgba(40, 45, 55, 0.93);
+    background-clip: padding-box;
+    text-shadow: 0 1px black;
+    -gtk-icon-shadow: 0 1px black;
+    outline-color: rgba(216, 222, 233, 0.3);
     box-shadow: none;
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black; }
@@ -572,10 +573,11 @@ button {
     .app-notification button.flat:backdrop, popover.background.touch-selection button.flat:backdrop, popover.background.magnifier button.flat:backdrop,
     .osd
     button.flat:backdrop {
-      background-color: transparent;
-      background-image: none;
-      background-color: #e2e7ef;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+      color: #d8dee9;
+      border-color: #1f232b;
+      background-image: linear-gradient(to bottom, rgba(40, 45, 55, 0.93), rgba(40, 45, 55, 0.93));
+      background-clip: padding-box;
+      box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
     .app-notification button.flat:active, popover.background.touch-selection button.flat:active, popover.background.magnifier button.flat:active, .app-notification button.flat:checked, popover.background.touch-selection button.flat:checked, popover.background.magnifier button.flat:checked,
@@ -957,6 +959,10 @@ toolbar button:active {
   color: #3b4252;
   background-color: #e3e7ef;
   text-shadow: none; }
+
+toolbar.osd .linked button {
+  border-color: #1f232b;
+  box-shadow: none; }
 
 .inline-toolbar toolbutton > button {
   background-color: transparent;
