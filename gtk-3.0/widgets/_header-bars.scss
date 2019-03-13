@@ -5,7 +5,7 @@
 headerbar {
   padding: 0 13px;
   min-height: 34px;
-  background:  mix($fg_color, darken($fg_color, 8%), 30%);
+  background: $headerbar_color;;
   color: $headerbar_fg_color;
   border-radius: 0;
   &:backdrop {
@@ -29,7 +29,10 @@ headerbar {
     @extend .dim-label;
   }
  
-  entry { min-height: 24px;}  
+  entry {
+    min-height: 24px; 
+    
+  }  
   
   button {
     @include button(normal-header);
@@ -184,6 +187,19 @@ headerbar {
   }
   .linked > button:hover,
   .linked > button:backdrop { @extend %linked-header; }
+
+  .linked:not(.vertical) > entry { 
+    border-color:$dark_borders_color;
+    box-shadow: none;
+    background: lighten($headerbar_color, 2%); 
+    color: $headerbar_fg_color;
+    caret-color: $headerbar_fg_color;
+    *{ color: $headerbar_fg_color; }
+    &:focus {
+      border-color: entry_focus_border();
+    }
+  }
+  
   // End reset style
 
   .path-bar-box {

@@ -2292,7 +2292,7 @@ GraniteWidgetsWelcome {
 headerbar {
   padding: 0 13px;
   min-height: 34px;
-  background: #2f3541;
+  background: #2e3440;
   color: #d8dee9;
   border-radius: 0; }
   .titlebar:backdrop,
@@ -2587,6 +2587,19 @@ headerbar {
       .titlebar .path-bar-box headerbar button:checked:backdrop label,
       headerbar .path-bar-box button:checked:backdrop label {
         color: #fefefe; }
+  .titlebar .linked:not(.vertical) > entry,
+  headerbar .linked:not(.vertical) > entry {
+    border-color: #1f232b;
+    box-shadow: none;
+    background: #323946;
+    color: #d8dee9;
+    caret-color: #d8dee9; }
+    .titlebar .linked:not(.vertical) > entry *,
+    headerbar .linked:not(.vertical) > entry * {
+      color: #d8dee9; }
+    .titlebar .linked:not(.vertical) > entry:focus,
+    headerbar .linked:not(.vertical) > entry:focus {
+      border-color: #81a1c1; }
   .titlebar .path-bar-box .dim-label, .titlebar .path-bar-box label.separator, .titlebar .path-bar-box .subtitle,
   headerbar .path-bar-box .dim-label,
   headerbar .path-bar-box label.separator,
