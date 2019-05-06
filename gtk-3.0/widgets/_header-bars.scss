@@ -36,7 +36,7 @@ headerbar {
   
   button {
     @include button(normal-header);
-    min-height: 14px;
+    min-height: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
     box-shadow: none;
@@ -202,15 +202,16 @@ headerbar {
   
   // End reset style
 
+
   .path-bar-box {
     .dim-label {
       color: transparent;
+      margin-right: -6px;
     }
     button {
       @extend %linked-button;
-      margin-left: -6px;
       &:last-child {
-        margin-left: -6px;
+        margin-left: -1px;
         border-radius: 0px;
         &:active, &:checked {
           border-radius: 0px 4px 4px 0px;
@@ -223,8 +224,17 @@ headerbar {
         }
       }
     }
+    widget > .text-button:last-child{
+      border-radius: 0px 4px 4px 0px;
+      @include button(active, $selected_bg_color, #fff);
+      &:backdrop, &:backdrop label {
+        color: $backdrop_selected_fg_color;
+      }
+      &:only-child{
+        border-radius: 4px;
+      } 
+    }
   }
-
   &.selection-mode {
     button {
       &:backdrop {
