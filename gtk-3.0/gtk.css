@@ -5838,12 +5838,12 @@ LibraryWindow .the-button-in-the-combobox {
   -gtk-icon-shadow: none; }
 
 #tasklist-button {
-  color: rgba(59, 66, 82, 0.8);
+  color: rgba(216, 222, 233, 0.8);
   border-radius: 0;
   border: none;
   background-color: rgba(46, 52, 64, 0); }
   #tasklist-button:hover {
-    color: #505a70;
+    color: #f9fafb;
     background-color: rgba(0, 0, 0, 0.17); }
   #tasklist-button:checked {
     color: white;
@@ -5851,7 +5851,7 @@ LibraryWindow .the-button-in-the-combobox {
     box-shadow: inset 0 -2px #81a1c1; }
 
 .xfce4-panel.panel button.flat {
-  color: #3b4252;
+  color: #d8dee9;
   border-radius: 0;
   border: none;
   background-color: rgba(46, 52, 64, 0); }
@@ -6051,18 +6051,18 @@ ConversationListView {
  ***********/
 #panel_window {
   background-color: #2e3440;
-  color: #3b4252;
+  color: #d8dee9;
   font-weight: bold;
   box-shadow: inset 0 -1px #1f232b; }
   #panel_window .menubar,
   #panel_window .menubar > .menuitem menubar,
   #panel_window menubar > menuitem {
     background-color: transparent;
-    color: #3b4252;
+    color: #d8dee9;
     font-weight: bold; }
   #panel_window .menubar .menuitem:disabled,
   #panel_window menubar menuitem:disabled {
-    color: rgba(59, 66, 82, 0.5); }
+    color: rgba(216, 222, 233, 0.5); }
     #panel_window .menubar .menuitem:disabled GtkLabel,
     #panel_window menubar menuitem:disabled GtkLabel {
       color: inherit; }
