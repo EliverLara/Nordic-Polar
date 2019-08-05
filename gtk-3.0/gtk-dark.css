@@ -2618,10 +2618,13 @@ headerbar {
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #81a1c1;
     text-shadow: none; }
-    .titlebar .path-bar-box widget > .text-button:last-child:backdrop, .titlebar .path-bar-box widget > .text-button:last-child:backdrop label,
-    headerbar .path-bar-box widget > .text-button:last-child:backdrop,
-    headerbar .path-bar-box widget > .text-button:last-child:backdrop label {
-      color: #fefefe; }
+    .titlebar .path-bar-box widget > .text-button:last-child:backdrop,
+    headerbar .path-bar-box widget > .text-button:last-child:backdrop {
+      background: rgba(129, 161, 193, 0.6); }
+      .titlebar .path-bar-box widget > .text-button:last-child:backdrop, .titlebar .path-bar-box widget > .text-button:last-child:backdrop label,
+      headerbar .path-bar-box widget > .text-button:last-child:backdrop,
+      headerbar .path-bar-box widget > .text-button:last-child:backdrop label {
+        color: #fefefe; }
     .titlebar .path-bar-box widget > .text-button:last-child:only-child,
     headerbar .path-bar-box widget > .text-button:last-child:only-child {
       border-radius: 4px; }
