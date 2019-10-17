@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Nordic-Polar
+Name=Nordic-Polar-standard-buttons
 Comment=Dark theme created using the awesome Nord color palette
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Nordic-Polar
-MetacityTheme=Nordic-Polar
+GtkTheme=Nordic-Polar-standard-buttons
+MetacityTheme=Nordic-Polar-standard-buttons
 IconTheme=Zafiro-icons
 ButtonLayout=:minimize,maximize,close
