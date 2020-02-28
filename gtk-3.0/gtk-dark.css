@@ -2337,36 +2337,37 @@ headerbar {
       .titlebar button.appmenu:backdrop,
       headerbar button.appmenu:backdrop {
         background: transparent; }
-    .titlebar button:hover, .titlebar button:active, .titlebar button:checked,
-    headerbar button:hover,
+    .titlebar button:hover,
+    headerbar button:hover {
+      color: #fff;
+      text-shadow: none;
+      background-color: rgba(129, 161, 193, 0.8);
+      border-color: #1f232b; }
+    .titlebar button:active, .titlebar button:checked,
     headerbar button:active,
     headerbar button:checked {
-      background-color: transparent;
-      color: #81a1c1;
-      box-shadow: none;
-      color: #81a1c1;
-      border-radius: 4px;
+      color: #fff;
+      outline-color: rgba(255, 255, 255, 0.3);
+      background-color: #81a1c1;
       text-shadow: none;
-      background-color: #2a2f3a;
-      border: 1px solid #1f232b; }
+      border-color: #1f232b; }
     .titlebar button:backdrop, .titlebar button:disabled, .titlebar button:backdrop:disabled,
     headerbar button:backdrop,
     headerbar button:disabled,
     headerbar button:backdrop:disabled {
       color: rgba(216, 222, 233, 0.2);
-      background-color: transparent;
-      border-radius: 0;
+      background-color: #282d37;
+      border-color: #1f232b;
       text-shadow: none;
-      box-shadow: none;
-      background-image: linear-gradient(to bottom, #282d37, #282d37);
-      border: 1px solid #1f232b;
-      border-radius: 4px; }
+      box-shadow: none; }
     .titlebar button:backdrop:hover, .titlebar button:backdrop:active, .titlebar button:backdrop:checked,
     headerbar button:backdrop:hover,
     headerbar button:backdrop:active,
     headerbar button:backdrop:checked {
-      background-color: transparent;
       color: #81a1c1;
+      background-color: rgba(129, 161, 193, 0.6);
+      border-color: #1f232b;
+      text-shadow: none;
       box-shadow: none; }
     .titlebar button.suggested-action,
     headerbar button.suggested-action {
@@ -2567,8 +2568,10 @@ headerbar {
   headerbar .linked > button:checked,
   .titlebar .path-bar-box headerbar button:checked,
   headerbar .path-bar-box button:checked {
-    background: #81a1c1;
-    color: #fff; }
+    color: #fff;
+    outline-color: rgba(255, 255, 255, 0.3);
+    background-color: #81a1c1;
+    text-shadow: none; }
     .titlebar .linked > button:active:backdrop,
     .titlebar headerbar .linked > button:active:backdrop, .titlebar .path-bar-box button:active:backdrop, headerbar .path-bar-box .titlebar button:active:backdrop, .titlebar .linked > button:checked:backdrop,
     .titlebar headerbar .linked > button:checked:backdrop, .titlebar .path-bar-box button:checked:backdrop, headerbar .path-bar-box .titlebar button:checked:backdrop,
@@ -2580,7 +2583,8 @@ headerbar {
     headerbar .linked > button:checked:backdrop,
     .titlebar .path-bar-box headerbar button:checked:backdrop,
     headerbar .path-bar-box button:checked:backdrop {
-      color: #fefefe; }
+      background-color: rgba(129, 161, 193, 0.6);
+      color: #81a1c1; }
       .titlebar .linked > button:active:backdrop label, .titlebar headerbar .linked > button:active:backdrop label, .titlebar .path-bar-box button:active:backdrop label, headerbar .path-bar-box .titlebar button:active:backdrop label, .titlebar .linked > button:checked:backdrop label, .titlebar headerbar .linked > button:checked:backdrop label, .titlebar .path-bar-box button:checked:backdrop label, headerbar .path-bar-box .titlebar button:checked:backdrop label,
       headerbar .titlebar .linked > button:active:backdrop label,
       headerbar .linked > button:active:backdrop label,
@@ -2590,7 +2594,7 @@ headerbar {
       headerbar .linked > button:checked:backdrop label,
       .titlebar .path-bar-box headerbar button:checked:backdrop label,
       headerbar .path-bar-box button:checked:backdrop label {
-        color: #fefefe; }
+        color: #81a1c1; }
   .titlebar .linked:not(.vertical) > entry,
   headerbar .linked:not(.vertical) > entry {
     border-color: #1f232b;
@@ -2638,7 +2642,7 @@ headerbar {
       .titlebar .path-bar-box widget > .text-button:last-child:backdrop, .titlebar .path-bar-box widget > .text-button:last-child:backdrop label,
       headerbar .path-bar-box widget > .text-button:last-child:backdrop,
       headerbar .path-bar-box widget > .text-button:last-child:backdrop label {
-        color: #fefefe; }
+        color: #81a1c1; }
     .titlebar .path-bar-box widget > .text-button:last-child:only-child,
     headerbar .path-bar-box widget > .text-button:last-child:only-child {
       border-radius: 4px; }
@@ -5241,10 +5245,9 @@ button.raven-trigger {
       border-radius: 0; }
       .raven .raven-header button:hover {
         color: #81a1c1;
-        border-radius: 4px;
         text-shadow: none;
-        background-color: #2a2f3a;
-        border: 1px solid #1f232b;
+        background-color: rgba(229, 233, 240, 0.8);
+        border-color: #1f232b;
         border-radius: 0; }
       .raven .raven-header button:active, .raven .raven-header button:checked {
         color: #81a1c1;

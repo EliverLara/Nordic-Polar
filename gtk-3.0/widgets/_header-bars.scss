@@ -48,32 +48,26 @@ headerbar {
       background: transparent;
       &:backdrop{background: transparent;}
     }
-    &:hover,
+    &:hover {
+      @include button(hover-header, $selected_bg_color, #fff);
+    }
     &:active,
     &:checked {
-      background-color: transparent;
-      color: $selected_bg_color;
-      box-shadow: none;
-      @include button(hover-header);
+      @include button(active, $selected_bg_color, #fff);
+      border-color: $dark_borders_color;
     }
 
     &:backdrop,
     &:disabled,
     &:backdrop:disabled {
-      @include button(backdrop-header,red, transparentize($headerbar_fg_color,0.8));
-      background-image: linear-gradient(to bottom, darken($main_dark_color, 3%), darken($main_dark_color, 3%));
-      border: 1px solid $dark_borders_color;
-      border-radius: 4px;
+      @include button(backdrop-header, darken($main_dark_color, 3%), transparentize($headerbar_fg_color,0.8));
     }
 
     &:backdrop {
       &:hover,
       &:active,
       &:checked {
-      background-color: transparent;
-      color: $selected_bg_color;
-      box-shadow: none;
-       // @include button(hover-header,transparent,transparentize(white,0.7));
+        @include button(backdrop-header, $backdrop_selected_bg_color, $selected_bg_color);
       }
     }
 
@@ -172,12 +166,12 @@ headerbar {
   %linked-button {
     @extend %linked-header;
     &:active, &:checked {
-      background: $selected_bg_color;
-      color: #fff;
+      @include button(active, $selected_bg_color, #fff);
       &:backdrop{
-        color: $backdrop_selected_fg_color;
+        background-color: $backdrop_selected_bg_color;
+        color:$selected_bg_color; 
         label{
-          color: $backdrop_selected_fg_color;
+          color: $selected_bg_color;
         }
       }
     }
@@ -189,7 +183,7 @@ headerbar {
   .linked > button:backdrop { @extend %linked-header; }
 
   .linked:not(.vertical) > entry { 
-    border-color:$dark_borders_color;
+    border-color: $dark_borders_color;
     box-shadow: none;
     background: lighten($headerbar_color, 2%); 
     color: $headerbar_fg_color;
@@ -230,7 +224,7 @@ headerbar {
       &:backdrop {
         background: $backdrop_selected_bg_color;
         &, label {
-          color: $backdrop_selected_fg_color;
+          color: $selected_bg_color;
         }
       }
       &:only-child{
