@@ -2,10 +2,10 @@
 // it gets @if ed depending on $variant
 
 // Main definitions
-$base_color: $nord5;
-$text_color: $nord1;
-$bg_color: $nord4;
-$fg_color: $nord1;
+$base_color: if($variant == 'light', $nord5, $nord1 );
+$text_color: if($variant == 'light', $nord1, $nord4 );
+$bg_color: if($variant == 'light', $nord4, $nord2);
+$fg_color: if($variant == 'light', $nord1, $nord4 );
 $switch_bg: if($variant == 'light', #ffffff, transparentize(black,1));
 $shadow_color: rgba(162, 162, 165, 0.21);
 
@@ -38,8 +38,8 @@ $bottom_highlight: if($variant == 'light', transparentize(black, 0.8), transpare
 $dark_fill: mix($borders_color, $bg_color, 35%);
 $headerbar_color: $main_dark_color;
 $headerbar_fg_color: $nord4;
-$menu_color: if($variant == 'light', $base_color, mix($bg_color, $base_color, 20%));
-$popover_bg_color: $base_color;
+$menu_color: if($variant == 'light', $base_color, $main_dark_color);
+$popover_bg_color: if($variant == 'light', $base_color, $main_dark_color);
 $popover_hover_color: darken($bg_color, 2%);
 
 $scrollbar_bg_color: mix($base_color, $bg_color, 50%);
@@ -111,4 +111,4 @@ $scale_bg: if($variant == 'light', transparentize(black,0.86) ,transparentize(wh
 $scale_disabled_bg: if($variant == 'light', transparentize(black, 0.94) ,transparentize(white, 0.94));
 $suggested_bg_color: linear-gradient(to right, $cyan 0%, $cyan 100%);
 $destructive_bg_color: linear-gradient(to right, $red, $red);
-$menu_shadow_color: if($variant == 'light', transparentize(rgb(112, 112, 112), 0.6), transparent);
+$menu_shadow_color: if($variant == 'light', transparentize(rgb(112, 112, 112), 0.6), $borders_color);
