@@ -900,6 +900,7 @@ StScrollBar {
   .calendar, .world-clocks-button, .weather-button, .events-button {
     background: transparent;
     border: none;
+    box-shadow: none;
   }
 
     .calendar,
@@ -1540,11 +1541,11 @@ StScrollBar {
 
 %icon_tile {
   color: $selected_fg_color;
-  padding: 7px 6px;
+  padding: 6px;
   border: none;
   transition-duration: 100ms;
   text-align: center;
-  box-shadow: $depth;
+  box-shadow: none;
 }
 
 /* App Folders */
