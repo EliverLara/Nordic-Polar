@@ -1149,14 +1149,16 @@ StScrollBar {
     padding: 7px;
     border: 1px solid rgba(0,0,0,0);
 
-    &-selected {
-      padding: 7px;
-      @extend %button:hover;
-    }
-    &-hover {
-      background-color: red;
+    &-selected { padding: 7px; }
+
+    &-selected, &-hover {
+      background-color: transparentize($selected_bg_color, 0.7);
       border-radius: 2px;
+      box-shadow: none;
+      text-shadow: none;
+      border: 1px solid $borders_color;
     }
+    
     &-greyed {
       padding: 7px;
       color: $insensitive_fg_color;
