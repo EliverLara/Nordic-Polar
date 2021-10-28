@@ -7,7 +7,7 @@ $_bubble_bg_color: $osd_bg_color;
 $_bubble_fg_color: $fg_color;
 $_bubble_borders_color: $fg_color;
 $_bubble_transparent: transparentize($osd_bg_color, 0.17);
-$topbar_bg_color: $dracula;
+$topbar_bg_color: transparentize($dracula,0);
 
 stage {
   @include fontsize($font-size);
@@ -157,6 +157,7 @@ StScrollBar {
   width: 65px;
   height: 22px;
   background-size: contain;
+  //Gnome 3.32//
   background-image: url("assets/toggle-off.svg");
   &:checked { background-image: url("assets/toggle-on.svg"); }
 }
@@ -567,8 +568,6 @@ StScrollBar {
   }
 }
 
-
-
   .popup-menu-ornament {
     text-align: right;
     width: 1.2em;
@@ -585,7 +584,7 @@ StScrollBar {
   }
 
   .popup-separator-menu-item {
-    background: transparent;
+
     &-separator {
       //-margin-horizontal: 24px;
       height: 1px; //not really the whole box
@@ -899,7 +898,7 @@ StScrollBar {
   .calendar {
     margin-bottom: 1em;
   }
-
+  
   .calendar, .world-clocks-button, .weather-button, .events-button {
     background: transparent;
     border: none;
@@ -929,6 +928,7 @@ StScrollBar {
     .message-list-section-title,
     .events-button {
       border-radius: 4px;
+      color: $fg_color;
       padding: .4em;
     }
 
@@ -945,7 +945,7 @@ StScrollBar {
     .weather-button,
     .events-section-title,
     .message-list-section-title,
-    .events-button  {
+    .events-button {
       &:hover,&:focus { background-color: lighten($bg_color,5%); }
       &:active {
         color: lighten($selected_fg_color,5%);
@@ -965,7 +965,7 @@ StScrollBar {
     .events-section-title,
     .message-list-section-title,
     .events-title {
-      color: darken($fg_color,40%);
+      color: darken($fg_color, 40%);
       font-weight: bold;
     }
 
@@ -1072,7 +1072,7 @@ StScrollBar {
       .message-list {
         width: 31.5em;
         .message-title, .message-content, .message-body {
-          color: darken($fg_color,5%);
+          color: darken($fg_color, 5%);
         }
       }
 
@@ -1205,6 +1205,7 @@ StScrollBar {
   }
 }
 
+
 /* Weather */
 .weather-button {
 
@@ -1229,7 +1230,7 @@ StScrollBar {
     font-weight: bold;
   }
 }
-          
+
   // a little unstructured mess:
 
   .system-switch-user-submenu-icon.user-icon {
@@ -1370,7 +1371,7 @@ StScrollBar {
   }
 
   .window-clone-border {
-    border: 4px solid transparentize($selected_bg_color,.7);
+    border: 4px solid transparentize($selected_bg_color, .7);
     border-radius: 0px;
     // For window decorations with round corners we can't match
     // the exact shape when the window is scaled. So apply a shadow
@@ -1411,6 +1412,20 @@ StScrollBar {
 
   //search results
 
+  %search-section-content-item {  
+    &:focus,
+    &:hover,
+    &:selected {
+      background-color: transparentize($osd_fg_color, .9);
+      transition-duration: 200ms;
+    }
+  
+    &:active,
+    &:checked {
+      background-color: transparentize(darken($osd_bg_color, 10%), .1);
+    }
+  }
+
   #searchResultsBin {
     max-width: 1000px;
   }
@@ -1422,6 +1437,7 @@ StScrollBar {
   }
 
   .search-section { spacing: 16px; } // This should be equal to #searchResultsContent spacing
+
   .search-section-content { 
     background-color: transparent;
     border-radius: 0;
@@ -1430,12 +1446,13 @@ StScrollBar {
     // This is the space between the provider icon and the results container
     spacing: 32px; 
   }
+  
   .search-statustext { // "no results"
     @extend %status_text;
   }
   .list-search-results { spacing: 3px; }
 
-  .search-section-separator { height: 2px; background-color: rgba(255, 255, 255, 0.2); }
+  .search-section-separator { height: 2px; background-color: $gray; }
 
   .list-search-result-content { spacing: 30px; }
   .list-search-result-title { color: lighten($topbar_color,5%); spacing: 12px; }
@@ -1443,6 +1460,12 @@ StScrollBar {
   .list-search-provider-details { width: 150px; color: lighten($topbar_color,5%); margin-top: 0.24em; }
   .list-search-provider-content { spacing: 20px; }
   .search-provider-icon { padding: 15px; }
+
+  //Icon tile
+  .search-provider-icon,
+  .list-search-result {
+    @extend %search-section-content-item;
+  }
 
 
   /* DASHBOARD */
@@ -1519,16 +1542,6 @@ StScrollBar {
     }
   }
 
-  //Icon tile
-  .search-provider-icon,
-  .list-search-result {
-    @extend %icon_tile;
-    &:active, &:checked { background-color: transparentize(darken($osd_bg_color,10%),.1); }
-    &:focus, &:selected, &:hover {
-      background-color: transparentize($bg_color,.7);
-      transition-duration: 200ms;
-    }
-  }
   .app-well-app,
   .app-well-app.app-folder,
   .show-apps,
@@ -1619,7 +1632,7 @@ StScrollBar {
       background-image: none;
       background-color: rgba(255, 255, 255, 0.7);
     }
-    &:checked .page-indicator-icon { 
+    &:checked .page-indicator-icon{ 
       background-image: none;
       background-color: #FFFFFF;
       transition-duration: 0s; 
