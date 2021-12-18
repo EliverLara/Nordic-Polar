@@ -1917,7 +1917,7 @@ actionbar > revealer > box {
 scrolledwindow viewport.frame {
   border-style: none; }
 scrolledwindow overshoot.top {
-  background-image: radial-gradient(farthest-side at top, #a4b2cb 85%, rgba(164, 178, 203, 0)), radial-gradient(farthest-side at top, #3b4252, rgba(59, 66, 82, 0));
+  background-image: radial-gradient(farthest-side at top, #c1cbdc 85%, rgba(193, 203, 220, 0)), radial-gradient(farthest-side at top, #c1cbdc, rgba(193, 203, 220, 0));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center top;
@@ -1925,7 +1925,7 @@ scrolledwindow overshoot.top {
   border: none;
   box-shadow: none; }
   scrolledwindow overshoot.top:backdrop {
-    background-image: radial-gradient(farthest-side at top, #c7d0de 85%, rgba(199, 208, 222, 0));
+    background-image: radial-gradient(farthest-side at top, #c1cbdc 85%, rgba(193, 203, 220, 0));
     background-size: 100% 5%;
     background-repeat: no-repeat;
     background-position: center top;
@@ -1933,7 +1933,7 @@ scrolledwindow overshoot.top {
     border: none;
     box-shadow: none; }
 scrolledwindow overshoot.bottom {
-  background-image: radial-gradient(farthest-side at bottom, #a4b2cb 85%, rgba(164, 178, 203, 0)), radial-gradient(farthest-side at bottom, #3b4252, rgba(59, 66, 82, 0));
+  background-image: radial-gradient(farthest-side at bottom, #c1cbdc 85%, rgba(193, 203, 220, 0)), radial-gradient(farthest-side at bottom, #c1cbdc, rgba(193, 203, 220, 0));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -1941,7 +1941,7 @@ scrolledwindow overshoot.bottom {
   border: none;
   box-shadow: none; }
   scrolledwindow overshoot.bottom:backdrop {
-    background-image: radial-gradient(farthest-side at bottom, #c7d0de 85%, rgba(199, 208, 222, 0));
+    background-image: radial-gradient(farthest-side at bottom, #c1cbdc 85%, rgba(193, 203, 220, 0));
     background-size: 100% 5%;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -1949,7 +1949,7 @@ scrolledwindow overshoot.bottom {
     border: none;
     box-shadow: none; }
 scrolledwindow overshoot.left {
-  background-image: radial-gradient(farthest-side at left, #a4b2cb 85%, rgba(164, 178, 203, 0)), radial-gradient(farthest-side at left, #3b4252, rgba(59, 66, 82, 0));
+  background-image: radial-gradient(farthest-side at left, #c1cbdc 85%, rgba(193, 203, 220, 0)), radial-gradient(farthest-side at left, #c1cbdc, rgba(193, 203, 220, 0));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: left center;
@@ -1957,7 +1957,7 @@ scrolledwindow overshoot.left {
   border: none;
   box-shadow: none; }
   scrolledwindow overshoot.left:backdrop {
-    background-image: radial-gradient(farthest-side at left, #c7d0de 85%, rgba(199, 208, 222, 0));
+    background-image: radial-gradient(farthest-side at left, #c1cbdc 85%, rgba(193, 203, 220, 0));
     background-size: 5% 100%;
     background-repeat: no-repeat;
     background-position: left center;
@@ -1965,7 +1965,7 @@ scrolledwindow overshoot.left {
     border: none;
     box-shadow: none; }
 scrolledwindow overshoot.right {
-  background-image: radial-gradient(farthest-side at right, #a4b2cb 85%, rgba(164, 178, 203, 0)), radial-gradient(farthest-side at right, #3b4252, rgba(59, 66, 82, 0));
+  background-image: radial-gradient(farthest-side at right, #c1cbdc 85%, rgba(193, 203, 220, 0)), radial-gradient(farthest-side at right, #c1cbdc, rgba(193, 203, 220, 0));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: right center;
@@ -1973,7 +1973,7 @@ scrolledwindow overshoot.right {
   border: none;
   box-shadow: none; }
   scrolledwindow overshoot.right:backdrop {
-    background-image: radial-gradient(farthest-side at right, #c7d0de 85%, rgba(199, 208, 222, 0));
+    background-image: radial-gradient(farthest-side at right, #c1cbdc 85%, rgba(193, 203, 220, 0));
     background-size: 5% 100%;
     background-repeat: no-repeat;
     background-position: right center;
