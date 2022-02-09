@@ -3,14 +3,14 @@
 *****************/
 /* GLOBALS */
 stage {
-  font-size: 10pt;
+  font-size: 11pt;
   color: #d8dee9; }
 
 /* WIDGETS */
 /* Buttons */
 .button {
   color: #d8dee9;
-  background-color: #232831;
+  background-color: #2a2f3a;
   box-shadow: none;
   border: 1px solid #1f232b;
   text-shadow: 0 1px black;
@@ -19,7 +19,8 @@ stage {
   border-width: 0;
   padding: 4px 32px; }
   .button:focus {
-    color: #81a1c1;
+    background-color: #81a1c1;
+    color: #fefefe;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
     box-shadow: none;
@@ -38,8 +39,8 @@ stage {
     text-shadow: none;
     icon-shadow: none; }
   .button:hover {
-    color: #81a1c1;
-    background-color: rgba(50, 57, 70, 0.95);
+    background-color: #81a1c1;
+    color: #fefefe;
     border: 1px solid #1f232b;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
@@ -66,20 +67,22 @@ stage {
     text-shadow: none;
     icon-shadow: none; }
   .modal-dialog-linked-button:focus {
-    color: #81a1c1;
+    background-color: #81a1c1;
+    color: #fefefe;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
     box-shadow: none;
     border: 1px solid #1f232b; }
     .modal-dialog-linked-button:focus:hover {
-      color: #81a1c1;
+      background-color: #81a1c1;
+      color: #fefefe;
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black;
       box-shadow: none;
       border: 1px solid #1f232b; }
   .modal-dialog-linked-button:hover {
-    color: #81a1c1;
-    background-color: rgba(50, 57, 70, 0.95);
+    background-color: #81a1c1;
+    color: #fefefe;
     border: 1px solid #1f232b;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
@@ -226,7 +229,7 @@ StScrollBar {
   .modal-dialog .run-dialog-button-box {
     padding-top: 1em; }
   .modal-dialog .run-dialog-label {
-    font-size: 11pt;
+    font-size: 12pt;
     font-weight: bold;
     color: #b7c2d7;
     padding-bottom: .4em; }
@@ -235,7 +238,7 @@ StScrollBar {
 
 .mount-dialog-subject,
 .end-session-dialog-subject {
-  font-size: 13pt; }
+  font-size: 14pt; }
 
 /* Message Dialog */
 .message-dialog-main-layout {
@@ -1631,7 +1634,7 @@ StScrollBar {
 
 .keyboard-key {
   color: #d8dee9;
-  background-color: #232831;
+  background-color: #2a2f3a;
   box-shadow: none;
   border: 1px solid #1f232b;
   text-shadow: 0 1px black;
@@ -1643,14 +1646,15 @@ StScrollBar {
   font-weight: bold;
   border-radius: 5px; }
   .keyboard-key:focus {
-    color: #81a1c1;
+    background-color: #81a1c1;
+    color: #fefefe;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
     box-shadow: none;
     border: 1px solid #1f232b; }
   .keyboard-key:hover, .keyboard-key:checked {
-    color: #81a1c1;
-    background-color: rgba(50, 57, 70, 0.95);
+    background-color: #81a1c1;
+    color: #fefefe;
     border: 1px solid #1f232b;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
@@ -1734,14 +1738,14 @@ StScrollBar {
     padding: 3px 18px; }
     .login-dialog .modal-dialog-button:default {
       color: #d8dee9;
-      background-color: #232831;
+      background-color: #2a2f3a;
       box-shadow: none;
       border: 1px solid #1f232b;
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black; }
       .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {
-        color: #81a1c1;
-        background-color: rgba(129, 161, 193, 0.7);
+        background-color: #81a1c1;
+        color: #fefefe;
         border: 1px solid #1f232b;
         text-shadow: 0 1px black;
         icon-shadow: 0 1px black; }
