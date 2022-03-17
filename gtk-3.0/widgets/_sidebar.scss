@@ -118,15 +118,12 @@ stacksidebar {
 /*                  PLACESSIDEBAR                                  */
 /*******************************************************************/
 
-/*--*/
-
-placessidebar {
+placessidebar{
 	&.sidebar{
 		background-color: transparent;
-		background-image:linear-gradient(to right, darken($main_dark_color, 5%) 40px,
-												$_sidebar_color 35px,$_sidebar_color 36px,
-												$_sidebar_color 36px,$_sidebar_color 99%, 
-												$_sidebar_color 100%);
+
+    @include sidebar_bg(right, darken($main_dark_color, 5%), $_sidebar_color);
+    &:dir(rtl) { @include sidebar_bg(left, darken($main_dark_color, 5%), $_sidebar_color); }
 		row{
 			&.sidebar-row {
         label {
@@ -139,13 +136,23 @@ placessidebar {
 						padding-left: 14px;
 						padding-right: 12px;
 						color: #98abb2;
+
+            &:dir(rtl) {
+              margin-right:-14px;
+              margin-left: 12px;
+              padding-right: 14px;
+              padding-left: 12px;
+              
+            }
 					}
 				}
 				&:hover{
 					transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 					color: rgba(0,0,0,0.76);
-					background-color: transparent; /*rgba(65,67,75,0.4); */
-					background-image:linear-gradient(to right, rgba(65,67,75,0) 40px, rgba(0,0,0,0.12) 40px,rgba(0,0,0,0.12) 97%);
+					background-color: transparent;
+
+          @include sidebar_bg(right,rgba(65,67,75,0), rgba(0,0,0,0.12));
+          &:dir(rtl) { @include sidebar_bg(left,rgba(65,67,75,0), rgba(0,0,0,0.12)); }
 				}
 
 				&:active{
@@ -157,13 +164,13 @@ placessidebar {
 
 				&:selected{
           color: #fff;
-          label {
-            color: $selected_bg_color;
-          }
+          label { color: $selected_bg_color; }
 					background-color: transparent;
-					background-image:linear-gradient(to right, $selected_bg_color 40px,
-																rgba(65,67,75,0) 36px, rgba(65,67,75,0)97%);
-					&:hover{
+
+          @include sidebar_bg(right, $selected_bg_color, rgba(65,67,75,0));
+          &:dir(rtl) { @include sidebar_bg(left, transparentize($selected_bg_color, 0.3), rgba(65,67,75,0)); }
+					
+          &:hover{
 						color: #ffffff;
 						background-color: rgba(0,0,0,0.24);
 						.sidebar-icon {
@@ -171,17 +178,13 @@ placessidebar {
 						}
           }
           &:backdrop{
-            color: rgba(0,0,0,0.54);;
-            background-color: transparent;
-            background-image:linear-gradient(to right, $selected_bg_color 40px,
-                                  rgba(65,67,75,0) 36px, rgba(65,67,75,0)97%);
-          
+            color: $backdrop_selected_fg_color;
             .sidebar-icon {
-              -gtk-icon-shadow: none;
+              -gtk-icon-shadow: none; 
               color: inherit; 
             }
           }
-
+          
 					.sidebar-icon {
 						-gtk-icon-shadow: 0 1px transparentize(#fff, 0.2);
 						color: inherit; 
@@ -205,7 +208,6 @@ placessidebar {
             background: $drop_target_color;
           }
         }
-
 			}
 		}
 	}
@@ -213,6 +215,4 @@ placessidebar {
 		background-color: transparent; 
 		&:backdrop { background-color: transparent; }
 	}
-  
-  
 }
