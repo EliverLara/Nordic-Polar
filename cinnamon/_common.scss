@@ -1268,13 +1268,13 @@ StScrollBar {
   }
 
   &-item-label {
-    font-weight: bold;
+    font-weight: normal;
     width: 15em;
     min-width: 5px;
   }
 
   &-item-box {
-    font-weight: bold;
+    font-weight: normal;
     background-image: none;
     padding-top: 0;
     padding-left: 8px;
@@ -1348,14 +1348,14 @@ StScrollBar {
 .grouped-window-list {
 
   &-item-label {
-    font-weight: bold;
+    font-weight: normal;
     width: 15em;
     min-width: 5px;
   }
 
   &-item-box {
     text-align: left;
-    font-weight: bold;
+    font-weight: normal;
     background-image: none;
     padding-top: 0;
     padding-left: 8px;
