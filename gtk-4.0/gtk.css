@@ -5453,7 +5453,7 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
     color: #d8dee9;
     padding: 3px 12px;
     margin: 0;
-    border-right: 1px solid #c5cedd; }
+    border-right: 1px solid #1f232b; }
   .nautilus-window #NautilusPathBar button:hover .dim-label, .nautilus-window #NautilusPathBar button:hover label.separator, .nautilus-window #NautilusPathBar button:hover .titlebar .subtitle, .titlebar .nautilus-window #NautilusPathBar button:hover .subtitle,
   .nautilus-window #NautilusPathBar button:hover headerbar .subtitle,
   headerbar .nautilus-window #NautilusPathBar button:hover .subtitle, .nautilus-window #NautilusPathBar button:focus .dim-label, .nautilus-window #NautilusPathBar button:focus label.separator, .nautilus-window #NautilusPathBar button:focus .titlebar .subtitle, .titlebar .nautilus-window #NautilusPathBar button:focus .subtitle,
