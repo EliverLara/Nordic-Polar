@@ -3107,6 +3107,9 @@ notebook > stack:not(:only-child) {
   notebook > stack:not(:only-child):backdrop {
     background-color: #e2e6ee; }
 
+tabbox {
+  background-color: #d5dbe7; }
+
 /*********
  * Paned *
  *********/
