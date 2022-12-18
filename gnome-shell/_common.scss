@@ -61,7 +61,7 @@ StEntry {
   @include entry(normal);
   border-radius: 6px;
   padding: 4px;
-  border-width: 2px;
+   border-width: 2px;
   color: $fg_color;
   &:hover { @include entry(hover);}
   &:focus { @include entry(focus,$fc:transparentize($fg_color,0.5));}
@@ -73,7 +73,7 @@ StEntry {
     warning-color: $warning_color;
     padding: 0 4px;
   }
-
+  
   StLabel.hint-text { color: transparentize($fg_color, 0.3); }
 
 }
@@ -111,17 +111,19 @@ StScrollBar {
 
 /* Slider */
 
-$slider_size: 16px;
+$slider_size: 19px;
 
 .slider {
   color: $fg_color;
+  height: 20px;
+  border-radius: 16px;
   // slider trough
-  -barlevel-height: 3px;
+  -barlevel-height: 19px;
   -barlevel-background-color: transparentize($fg_color, 0.6); //background of the trough
   -barlevel-border-width: 2px; 
   -barlevel-border-color: transparent; // trough border color
   // fill style
-  -barlevel-active-background-color: $selected_bg_color;
+  -barlevel-active-background-color: transparentize($selected_bg_color, 0.1);
   -barlevel-active-border-color: transparent;
   // overfill style (red in this case)
   -barlevel-overdrive-color: $destructive_color;
@@ -516,6 +518,7 @@ $slider_size: 16px;
 
 /* Popovers/Menus */
 
+
 .popup-menu {
   min-width: 15em;
   background-color: transparent;
@@ -572,6 +575,7 @@ $slider_size: 16px;
 
   &:checked { 
     background-color: transparentize($selected_bg_color, 0.5) !important;
+    font-weight: bold;
     color: $selected_fg_color !important;
     border-radius: 6px 6px 0px 0px;
     box-shadow: none;
@@ -924,13 +928,14 @@ $slider_size: 16px;
 }
 
   // calendar popover
-  
+
   .calendar {
     background: transparent;
     border: none;
     box-shadow: none;
   }
-  .world-clocks-button, .weather-button, .events-button {
+
+ .world-clocks-button, .weather-button, .events-button {
     background: $bg_color;
     border-radius: 7px;
     padding: 12px;
@@ -939,6 +944,7 @@ $slider_size: 16px;
 
     .datemenu-calendar-column {
       border: 0 solid transparent;
+
     }
 
     .datemenu-today-button,
@@ -1029,9 +1035,9 @@ $slider_size: 16px;
       border-radius: 99px;
       color: $fg_color;
       background-gradient-direction: none;
-
+      
       &:hover, &:focus { 
-        background-color: lighten($bg_color, 10%);
+        background-color: lighten($bg_color, 7%);
         box-shadow: none;
       }
       &:active,&:selected {
@@ -1061,7 +1067,7 @@ $slider_size: 16px;
         font-weight: bold;
         border: 1px solid $selected_bg_color;
         background-color: transparent;
-        color: $selected_fg_color !important;
+        color: $selected_fg_color;
 
         &:hover,&:focus {
           background-color:lighten($selected_bg_color, 3%);
@@ -1105,7 +1111,6 @@ $slider_size: 16px;
           color: darken($fg_color, 5%);
         }
       }
-
         .message-list-sections {
           spacing: 1em;
         }
@@ -1141,6 +1146,7 @@ $slider_size: 16px;
           background: lighten($bg_color, 1%);
           box-shadow: none;
         }
+
           .message-secondary-bin > .event-time {
             color: darken($fg_color, 15%);
             font-size: 0.7em;
@@ -1162,9 +1168,10 @@ $slider_size: 16px;
           .message-content {
           //  color: darken($fg_color,20%);
             padding: 10px;
+
           }
 
-                      // close button
+            // close button
           .message-close-button {
             color: $fg_color;
             background-color: transparentize($fg_color, 0.9);
@@ -1179,6 +1186,7 @@ $slider_size: 16px;
               > StIcon { color: $selected_fg_color; }
             }
           }
+
 
 /* Media Controls */
 .message-media-control {
@@ -1199,6 +1207,8 @@ $slider_size: 16px;
   &:insensitive { color: lighten($insensitive_fg_color, 5%); }
   
 }
+
+
 
           .media-message-cover-icon {
             icon-size: 48px !important;
@@ -1384,7 +1394,7 @@ $slider_size: 16px;
 }
 
 #overviewGroup {
-  background-color: $bg_color
+  background-color: $bg_color;
 }
 
 .overview-controls {
@@ -1420,7 +1430,6 @@ $slider_size: 16px;
   padding: 9px;
   border-radius: 10px;
   border-color: transparent;
-
   .search-entry-icon { icon-size: 1em; padding: 0 4px; color: transparentize($fg_color,.3); }
 
 }
@@ -1476,11 +1485,11 @@ $slider_size: 16px;
 .list-search-provider-content { spacing: 20px; }
 .search-provider-icon { padding: 15px; }
 
-//Icon tile
-.search-provider-icon,
-.list-search-result {
-  @extend %search-section-content-item;
-}
+  //Icon tile
+  .search-provider-icon,
+  .list-search-result {
+    @extend %search-section-content-item;
+  }
 
 
 /* DASHBOARD */
@@ -1535,7 +1544,6 @@ $slider_size: 16px;
     border-radius: 0 3px 3px 0;
   }
 }
-
 .app-well-app,
 .app-well-app.app-folder,
 .show-apps,
@@ -1574,7 +1582,7 @@ $slider_size: 16px;
 
 %icon_tile {
   color: $selected_fg_color;
-  padding: 6px;
+  padding: 7px 6px;
   border: none;
   transition-duration: 100ms;
   text-align: center;
@@ -1630,7 +1638,7 @@ $slider_size: 16px;
 
 .page-indicator {
   padding: 6px 12px;
-
+  
   .page-indicator-icon {
     width: 12px;
     height: 12px;
@@ -1711,11 +1719,11 @@ $slider_size: 16px;
     color: $topbar_color;
     background-color: $bg_color;
     border: 1px solid $borders_color;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.426);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.445);
     &:hover, &:focus { 
-      background-color: lighten($bg_color, 3%);
+      background-color: lighten($bg_color, 3%); 
       box-shadow: none;
-      border-radius: 12px; 
+      border-radius: 12px;
     }
     *{ color: $topbar_color; }
 
@@ -2189,8 +2197,6 @@ $slider_size: 16px;
   }
 
 
-  // Gnome 43 Quick settings menu
-
   .quick-settings {
     padding: 14px;
     border-radius: 12px;
@@ -2204,12 +2210,10 @@ $slider_size: 16px;
   
   .quick-toggle {
     border-radius: 99px;
-    min-width: 12em;
-    max-width: 12em;
     min-height: 40px;
   
     &:checked { 
-      @include button(active, transparentize($selected_bg_color, 0.6));
+      @include button(active, transparentize($selected_bg_color, 0.4));
       color: $selected_fg_color;
     }
   
