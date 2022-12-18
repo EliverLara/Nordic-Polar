@@ -144,16 +144,18 @@ StScrollBar {
 /* Slider */
 .slider {
   color: #d8dee9;
-  -barlevel-height: 3px;
+  height: 20px;
+  border-radius: 16px;
+  -barlevel-height: 19px;
   -barlevel-background-color: rgba(216, 222, 233, 0.4);
   -barlevel-border-width: 2px;
   -barlevel-border-color: transparent;
-  -barlevel-active-background-color: #81a1c1;
+  -barlevel-active-background-color: rgba(129, 161, 193, 0.9);
   -barlevel-active-border-color: transparent;
   -barlevel-overdrive-color: #9b1b32;
   -barlevel-overdrive-border-color: transparent;
   -barlevel-overdrive-separator-width: 0px;
-  -slider-handle-radius: 8px;
+  -slider-handle-radius: 9.5px;
   -slider-handle-border-width: 0;
   -slider-handle-border-color: transparent; }
 
@@ -523,6 +525,7 @@ StScrollBar {
     color: #d8dee9 !important; }
   .popup-menu-item:checked {
     background-color: rgba(129, 161, 193, 0.5) !important;
+    font-weight: bold;
     color: #fefefe !important;
     border-radius: 6px 6px 0px 0px;
     box-shadow: none; }
@@ -886,7 +889,7 @@ StScrollBar {
   color: #d8dee9;
   background-gradient-direction: none; }
   .calendar-day-base:hover, .calendar-day-base:focus {
-    background-color: #434c5e;
+    background-color: #3d4555;
     box-shadow: none; }
   .calendar-day-base:active, .calendar-day-base:selected {
     color: white;
@@ -914,7 +917,7 @@ StScrollBar {
   font-weight: bold;
   border: 1px solid #81a1c1;
   background-color: transparent;
-  color: #fefefe !important; }
+  color: #fefefe; }
   .calendar-today:hover, .calendar-today:focus {
     background-color: #8ba9c6;
     color: #fefefe; }
@@ -1362,7 +1365,7 @@ StScrollBar {
 .show-apps .overview-icon,
 .grid-search-result .overview-icon {
   color: #fefefe;
-  padding: 6px;
+  padding: 7px 6px;
   border: none;
   transition-duration: 100ms;
   text-align: center;
@@ -1474,7 +1477,7 @@ StScrollBar {
   color: #d8dee9;
   background-color: #2e3440;
   border: 1px solid #1f232b;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.426); }
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.445); }
   .notification-banner:hover, .notification-banner:focus {
     background-color: #343b49;
     box-shadow: none;
@@ -1987,14 +1990,12 @@ StScrollBar {
 
 .quick-toggle {
   border-radius: 99px;
-  min-width: 12em;
-  max-width: 12em;
   min-height: 40px;
   /* Move padding into the box; this is to allow menu arrows
      to extend to the border */ }
   .quick-toggle:checked {
     color: #81a1c1;
-    background-color: rgba(129, 161, 193, 0.4);
+    background-color: rgba(129, 161, 193, 0.6);
     border: 1px solid #1f232b;
     text-shadow: none;
     icon-shadow: none;
