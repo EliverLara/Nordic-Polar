@@ -3254,7 +3254,8 @@ popover.background {
     background-color: #e5e9f0;
     background-clip: padding-box;
     border: 1px solid #c5cedd;
-    box-shadow: 0 4px 6px rgba(112, 112, 112, 0.4); }
+    box-shadow: 0 4px 6px rgba(112, 112, 112, 0.4);
+    color: #3b4252; }
   popover.background:backdrop {
     background-color: transparent;
     box-shadow: none; }
@@ -5652,8 +5653,6 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   background: #323946;
   color: #d8dee9;
   caret-color: #d8dee9; }
-  .nautilus-window #NautilusQueryEditor * {
-    color: #d8dee9; }
   .nautilus-window #NautilusQueryEditor #NautilusQueryEditorTag > button {
     margin: 0; }
   .nautilus-window #NautilusQueryEditor > menubutton > button {
@@ -5663,7 +5662,8 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
     -gtk-icon-size: 12px;
     padding: 0 4px; }
   .nautilus-window #NautilusQueryEditor > text, .nautilus-window #NautilusQueryEditor > image {
-    margin: 0; }
+    margin: 0;
+    color: #d8dee9; }
 .nautilus-window notebook > stack:only-child {
   background-color: #e5e9f0; }
   .nautilus-window notebook > stack:only-child:backdrop {
