@@ -5800,7 +5800,7 @@ radiobutton.color-button:active > radio {
   color: rgba(216, 222, 233, 0.8);
   border-radius: 0;
   border: none;
-  background-color: rgba(46, 52, 64, 0); }
+  background-color: #2e3440; }
   #tasklist-button:hover {
     color: #f9fafb;
     background-color: rgba(0, 0, 0, 0.17); }
@@ -5814,7 +5814,7 @@ panel-toplevel.background button:not(#tasklist-button) {
   color: #d8dee9;
   border-radius: 0;
   border: none;
-  background-color: rgba(46, 52, 64, 0); }
+  background-color: #2e3440; }
   .xfce4-panel.panel button.flat:hover, .mate-panel-menu-bar button:hover:not(#tasklist-button),
   panel-toplevel.background button:hover:not(#tasklist-button) {
     border: none;
