@@ -2867,7 +2867,7 @@ menu, .menu, .context-menu {
   margin: 4px;
   padding: 2px 0px;
   background: #e5e9f0;
-  border: 1px solid #c5cedd;
+  border: none;
   border-radius: 5px;
   font: initial; }
   .csd menu,
