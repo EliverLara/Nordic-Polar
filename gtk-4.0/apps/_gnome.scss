@@ -134,6 +134,10 @@
       padding: 0 4px;
     }
 
+    image {
+      color: $headerbar_fg_color;
+    }
+
     > text, > image { 
       margin: 0;
       color: $headerbar_fg_color;
