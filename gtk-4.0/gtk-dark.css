@@ -322,7 +322,7 @@ popover.background.magnifier > contents, .osd {
     background-image: radial-gradient(farthest-side, #b4c7da 0%, rgba(180, 199, 218, 0) 0%); }
   to {
     background-image: radial-gradient(farthest-side, #b4c7da 95%, rgba(180, 199, 218, 0)); } }
-notebook > header > tabs > arrow,
+notebook > header > tabs > arrow, popover.background button,
 button {
   min-height: 20px;
   min-width: 16px;
@@ -334,7 +334,7 @@ button {
   color: #d8dee9;
   background-color: #3c4454;
   text-shadow: none; }
-  notebook > header > tabs > arrow,
+  notebook > header > tabs > arrow, popover.background button.flat,
   button.flat {
     border-color: transparent;
     background-color: transparent;
@@ -343,7 +343,7 @@ button {
     text-shadow: none;
     -gtk-icon-shadow: none;
     transition: none; }
-    notebook > header > tabs > arrow:hover,
+    notebook > header > tabs > arrow:hover, popover.background button.flat:hover,
     button.flat:hover {
       transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
       transition-duration: 500ms;
@@ -351,17 +351,17 @@ button {
       outline-color: rgba(254, 254, 254, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      notebook > header > tabs > arrow:hover:active,
+      notebook > header > tabs > arrow:hover:active, popover.background button.flat:hover:active,
       button.flat:hover:active {
         transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  notebook > header > tabs > arrow:hover,
+  notebook > header > tabs > arrow:hover, popover.background button:hover,
   button:hover {
     color: #fefefe;
     outline-color: rgba(254, 254, 254, 0.3);
     background-color: #81a1c1;
     text-shadow: none;
     -gtk-icon-filter: brightness(1.2); }
-  notebook > header > tabs > arrow:active, notebook > header > tabs > arrow:checked,
+  notebook > header > tabs > arrow:active, notebook > header > tabs > arrow:checked, popover.background button:active, popover.background button:checked,
   button:active,
   button:checked {
     color: #fefefe;
@@ -369,7 +369,7 @@ button {
     background-color: #7094b9;
     text-shadow: none;
     transition-duration: 50ms; }
-  notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:backdrop,
+  notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:backdrop, popover.background button:backdrop.flat, popover.background button:backdrop,
   button:backdrop.flat,
   button:backdrop {
     color: #b9bfcb;
@@ -378,7 +378,7 @@ button {
     text-shadow: none;
     transition: 200ms ease-out;
     -gtk-icon-filter: none; }
-    notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked,
+    notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, popover.background button:backdrop.flat:active, popover.background button:backdrop.flat:checked, popover.background button:backdrop:active, popover.background button:backdrop:checked,
     button:backdrop.flat:active,
     button:backdrop.flat:checked,
     button:backdrop:active,
@@ -387,20 +387,20 @@ button {
       outline-color: rgba(216, 222, 233, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label,
+      notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, popover.background button:backdrop.flat:active label, popover.background button:backdrop.flat:checked label, popover.background button:backdrop:active label, popover.background button:backdrop:checked label,
       button:backdrop.flat:active label,
       button:backdrop.flat:checked label,
       button:backdrop:active label,
       button:backdrop:checked label {
         color: rgba(254, 254, 254, 0.7); }
-    notebook > header > tabs > arrow:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled,
+    notebook > header > tabs > arrow:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled, popover.background button:backdrop.flat:disabled, popover.background button:backdrop:disabled,
     button:backdrop.flat:disabled,
     button:backdrop:disabled {
       color: #b9bfcb;
       outline-color: rgba(216, 222, 233, 0.3);
       background-color: #404859;
       text-shadow: none; }
-      notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked,
+      notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, popover.background button:backdrop.flat:disabled:active, popover.background button:backdrop.flat:disabled:checked, popover.background button:backdrop:disabled:active, popover.background button:backdrop:disabled:checked,
       button:backdrop.flat:disabled:active,
       button:backdrop.flat:disabled:checked,
       button:backdrop:disabled:active,
@@ -409,7 +409,7 @@ button {
         outline-color: rgba(216, 222, 233, 0.3);
         background-color: #81a1c1;
         text-shadow: none; }
-  notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:disabled, notebook > header > tabs > arrow:backdrop:disabled,
+  notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:disabled, notebook > header > tabs > arrow:backdrop:disabled, popover.background button.flat:backdrop, popover.background button.flat:disabled, popover.background button.flat:backdrop:disabled,
   button.flat:backdrop,
   button.flat:disabled,
   button.flat:backdrop:disabled {
@@ -419,57 +419,60 @@ button {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  notebook > header > tabs > arrow:disabled,
+  notebook > header > tabs > arrow:disabled, popover.background button:disabled,
   button:disabled {
     color: #b9bfcb;
     outline-color: rgba(216, 222, 233, 0.3);
     background-color: #404859;
     text-shadow: none; }
-    notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked,
+    notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked, popover.background button:disabled:active, popover.background button:disabled:checked,
     button:disabled:active,
     button:disabled:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(216, 222, 233, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      notebook > header > tabs > arrow:disabled:active label, notebook > header > tabs > arrow:disabled:checked label,
+      notebook > header > tabs > arrow:disabled:active label, notebook > header > tabs > arrow:disabled:checked label, popover.background button:disabled:active label, popover.background button:disabled:checked label,
       button:disabled:active label,
       button:disabled:checked label {
         color: rgba(254, 254, 254, 0.7); }
-  notebook > header > tabs > arrow.image-button,
+  notebook > header > tabs > arrow.image-button, popover.background button.image-button,
   button.image-button {
     min-width: 24px;
     padding-left: 4px;
     padding-right: 4px; }
-  notebook > header > tabs > arrow.image-button.circular, notebook > header > tabs > arrow.image-button.sidebar-button,
+  notebook > header > tabs > arrow.image-button.circular, notebook > header > tabs > arrow.image-button.sidebar-button, popover.background button.image-button.circular, popover.background button.image-button.sidebar-button,
   button.image-button.circular,
   button.image-button.sidebar-button {
     padding: 6px 4px;
     border-radius: 50px;
     box-shadow: none; }
-  notebook > header > tabs > arrow.text-button,
+  notebook > header > tabs > arrow.text-button, popover.background button.text-button,
   button.text-button {
     padding-left: 16px;
     padding-right: 16px; }
-  notebook > header > tabs > arrow.text-button.image-button,
+  notebook > header > tabs > arrow.text-button.image-button, popover.background button.text-button.image-button,
   button.text-button.image-button {
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 2px; }
-    notebook > header > tabs > arrow.text-button.image-button label,
+    notebook > header > tabs > arrow.text-button.image-button label, popover.background button.text-button.image-button label,
     button.text-button.image-button label {
       padding-left: 8px;
       padding-right: 8px; }
-  combobox:drop(active) button.combo, notebook > header > tabs > arrow:drop(active),
+  combobox:drop(active) button.combo, notebook > header > tabs > arrow:drop(active), popover.background button:drop(active),
   button:drop(active) {
     color: #a3be8c;
     border-color: #a3be8c;
     box-shadow: inset 0 0 0 1px #a3be8c; }
+row:selected popover.background button.flat:not(:active):not(:checked):not(:hover):not(disabled), popover.background row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled),
 row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
   color: #fefefe;
   border-color: transparent; }
+  row:selected popover.background button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop, popover.background row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop,
   row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop {
     color: #8e95a4; }
+popover.background button.osd,
 button.osd {
   min-width: 24px;
   min-height: 20px;
@@ -485,8 +488,10 @@ button.osd {
   outline-color: rgba(216, 222, 233, 0.3);
   border: none;
   box-shadow: none; }
+  popover.background button.osd.image-button,
   button.osd.image-button {
     min-width: 32px; }
+  popover.background button.osd:hover,
   button.osd:hover {
     color: white;
     border-color: #1f232b;
@@ -497,6 +502,7 @@ button.osd {
     outline-color: rgba(216, 222, 233, 0.3);
     border: none;
     box-shadow: none; }
+  popover.background button.osd:active, popover.background button.osd:checked,
   button.osd:active,
   button.osd:checked {
     color: white;
@@ -508,6 +514,7 @@ button.osd {
     outline-color: rgba(216, 222, 233, 0.3);
     border: none;
     box-shadow: none; }
+  popover.background button.osd:disabled:backdrop, popover.background button.osd:disabled,
   button.osd:disabled:backdrop,
   button.osd:disabled {
     color: #808690;
@@ -518,6 +525,7 @@ button.osd {
     text-shadow: none;
     -gtk-icon-shadow: none;
     border: none; }
+  popover.background button.osd:backdrop,
   button.osd:backdrop {
     color: #d8dee9;
     border-color: #1f232b;
@@ -528,7 +536,7 @@ button.osd {
     -gtk-icon-shadow: none;
     border: none; }
 .app-notification button,
-.app-notification.frame button, popover.background.touch-selection button, popover.background.magnifier button,
+.app-notification.frame button, popover.background.touch-selection button, popover.background.magnifier button, .osd popover.background button, popover.background .osd button,
 .osd button {
   color: #d8dee9;
   border-color: #1f232b;
@@ -537,7 +545,7 @@ button.osd {
   text-shadow: 0 1px black;
   -gtk-icon-shadow: 0 1px black;
   outline-color: rgba(216, 222, 233, 0.3); }
-  .app-notification button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover,
+  .app-notification button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .osd popover.background button:hover, popover.background .osd button:hover,
   .osd button:hover {
     color: white;
     border-color: #1f232b;
@@ -546,7 +554,7 @@ button.osd {
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(216, 222, 233, 0.3); }
-  .app-notification button:active:backdrop, popover.background.touch-selection button:active:backdrop, popover.background.magnifier button:active:backdrop, .app-notification button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .app-notification button:checked:backdrop, popover.background.touch-selection button:checked:backdrop, popover.background.magnifier button:checked:backdrop, .app-notification button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked,
+  .app-notification button:active:backdrop, popover.background.touch-selection button:active:backdrop, popover.background.magnifier button:active:backdrop, .app-notification button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .app-notification button:checked:backdrop, popover.background.touch-selection button:checked:backdrop, popover.background.magnifier button:checked:backdrop, .app-notification button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .osd popover.background button:active:backdrop, popover.background .osd button:active:backdrop, .osd popover.background button:active, popover.background .osd button:active, .osd popover.background button:checked:backdrop, popover.background .osd button:checked:backdrop, .osd popover.background button:checked, popover.background .osd button:checked,
   .osd button:active:backdrop,
   .osd button:active,
   .osd button:checked:backdrop,
@@ -558,7 +566,7 @@ button.osd {
     text-shadow: none;
     -gtk-icon-shadow: none;
     outline-color: rgba(216, 222, 233, 0.3); }
-  .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled,
+  .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .osd popover.background button:disabled:backdrop, popover.background .osd button:disabled:backdrop, .osd popover.background button:disabled, popover.background .osd button:disabled,
   .osd button:disabled:backdrop,
   .osd button:disabled {
     color: #808690;
@@ -568,7 +576,7 @@ button.osd {
     box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  .app-notification button:backdrop, popover.background.touch-selection button:backdrop, popover.background.magnifier button:backdrop,
+  .app-notification button:backdrop, popover.background.touch-selection button:backdrop, popover.background.magnifier button:backdrop, .osd popover.background button:backdrop, popover.background .osd button:backdrop,
   .osd button:backdrop {
     color: #d8dee9;
     border-color: #1f232b;
@@ -577,7 +585,7 @@ button.osd {
     box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  .app-notification button.flat, popover.background.touch-selection button.flat, popover.background.magnifier button.flat,
+  .app-notification button.flat, popover.background.touch-selection button.flat, popover.background.magnifier button.flat, .osd popover.background button.flat, popover.background .osd button.flat,
   .osd button.flat {
     color: #d8dee9;
     border-color: #1f232b;
@@ -589,7 +597,7 @@ button.osd {
     box-shadow: none;
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black; }
-    .app-notification button.flat:hover, popover.background.touch-selection button.flat:hover, popover.background.magnifier button.flat:hover,
+    .app-notification button.flat:hover, popover.background.touch-selection button.flat:hover, popover.background.magnifier button.flat:hover, .osd popover.background button.flat:hover, popover.background .osd button.flat:hover,
     .osd button.flat:hover {
       color: white;
       border-color: #1f232b;
@@ -598,7 +606,7 @@ button.osd {
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .app-notification button.flat:disabled, popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled,
+    .app-notification button.flat:disabled, popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled, .osd popover.background button.flat:disabled, popover.background .osd button.flat:disabled,
     .osd button.flat:disabled {
       color: #808690;
       border-color: #1f232b;
@@ -610,7 +618,7 @@ button.osd {
       background-image: none;
       border-color: transparent;
       box-shadow: none; }
-    .app-notification button.flat:backdrop, popover.background.touch-selection button.flat:backdrop, popover.background.magnifier button.flat:backdrop,
+    .app-notification button.flat:backdrop, popover.background.touch-selection button.flat:backdrop, popover.background.magnifier button.flat:backdrop, .osd popover.background button.flat:backdrop, popover.background .osd button.flat:backdrop,
     .osd button.flat:backdrop {
       color: #d8dee9;
       border-color: #1f232b;
@@ -619,7 +627,7 @@ button.osd {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-    .app-notification button.flat:active, popover.background.touch-selection button.flat:active, popover.background.magnifier button.flat:active, .app-notification button.flat:checked, popover.background.touch-selection button.flat:checked, popover.background.magnifier button.flat:checked,
+    .app-notification button.flat:active, popover.background.touch-selection button.flat:active, popover.background.magnifier button.flat:active, .app-notification button.flat:checked, popover.background.touch-selection button.flat:checked, popover.background.magnifier button.flat:checked, .osd popover.background button.flat:active, popover.background .osd button.flat:active, .osd popover.background button.flat:checked, popover.background .osd button.flat:checked,
     .osd button.flat:active,
     .osd button.flat:checked {
       color: white;
@@ -629,54 +637,54 @@ button.osd {
       text-shadow: none;
       -gtk-icon-shadow: none;
       outline-color: rgba(216, 222, 233, 0.3); }
-button.suggested-action {
+popover.background button.suggested-action, button.suggested-action {
   border: none;
   box-shadow: none;
   color: white;
   border-radius: 4px;
   background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
-  button.suggested-action.flat {
+  popover.background button.suggested-action.flat, button.suggested-action.flat {
     box-shadow: none;
     color: white;
     border-radius: 4px;
     background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
-  button.suggested-action:hover {
+  popover.background button.suggested-action:hover, button.suggested-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
     text-shadow: none; }
-  button.suggested-action:active, button.suggested-action:checked {
+  popover.background button.suggested-action:active, popover.background button.suggested-action:checked, button.suggested-action:active, button.suggested-action:checked {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
     text-shadow: none; }
-  button.suggested-action:backdrop, button.suggested-action.flat:backdrop {
+  popover.background button.suggested-action:backdrop, popover.background button.suggested-action.flat:backdrop, button.suggested-action:backdrop, button.suggested-action.flat:backdrop {
     color: rgba(255, 255, 255, 0.4);
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
     text-shadow: none; }
-    button.suggested-action:backdrop label, button.suggested-action.flat:backdrop label {
+    popover.background button.suggested-action:backdrop label, popover.background button.suggested-action.flat:backdrop label, button.suggested-action:backdrop label, button.suggested-action.flat:backdrop label {
       color: rgba(255, 255, 255, 0.5); }
-    button.suggested-action:backdrop:active, button.suggested-action:backdrop:checked, button.suggested-action.flat:backdrop:active, button.suggested-action.flat:backdrop:checked {
+    popover.background button.suggested-action:backdrop:active, popover.background button.suggested-action:backdrop:checked, popover.background button.suggested-action.flat:backdrop:active, popover.background button.suggested-action.flat:backdrop:checked, button.suggested-action:backdrop:active, button.suggested-action:backdrop:checked, button.suggested-action.flat:backdrop:active, button.suggested-action.flat:backdrop:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      button.suggested-action:backdrop:active label, button.suggested-action:backdrop:checked label, button.suggested-action.flat:backdrop:active label, button.suggested-action.flat:backdrop:checked label {
+      popover.background button.suggested-action:backdrop:active label, popover.background button.suggested-action:backdrop:checked label, popover.background button.suggested-action.flat:backdrop:active label, popover.background button.suggested-action.flat:backdrop:checked label, button.suggested-action:backdrop:active label, button.suggested-action:backdrop:checked label, button.suggested-action.flat:backdrop:active label, button.suggested-action.flat:backdrop:checked label {
         color: rgba(254, 254, 254, 0.7); }
-    button.suggested-action:backdrop:disabled, button.suggested-action.flat:backdrop:disabled {
+    popover.background button.suggested-action:backdrop:disabled, popover.background button.suggested-action.flat:backdrop:disabled, button.suggested-action:backdrop:disabled, button.suggested-action.flat:backdrop:disabled {
       color: white;
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #88c0d0;
       text-shadow: none; }
-      button.suggested-action:backdrop:disabled label, button.suggested-action.flat:backdrop:disabled label {
+      popover.background button.suggested-action:backdrop:disabled label, popover.background button.suggested-action.flat:backdrop:disabled label, button.suggested-action:backdrop:disabled label, button.suggested-action.flat:backdrop:disabled label {
         color: rgba(255, 255, 255, 0.5); }
-      button.suggested-action:backdrop:disabled:active, button.suggested-action:backdrop:disabled:checked, button.suggested-action.flat:backdrop:disabled:active, button.suggested-action.flat:backdrop:disabled:checked {
+      popover.background button.suggested-action:backdrop:disabled:active, popover.background button.suggested-action:backdrop:disabled:checked, popover.background button.suggested-action.flat:backdrop:disabled:active, popover.background button.suggested-action.flat:backdrop:disabled:checked, button.suggested-action:backdrop:disabled:active, button.suggested-action:backdrop:disabled:checked, button.suggested-action.flat:backdrop:disabled:active, button.suggested-action.flat:backdrop:disabled:checked {
         color: rgba(254, 254, 254, 0.7);
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #81a1c1;
         text-shadow: none; }
-  button.suggested-action.flat:backdrop, button.suggested-action.flat:disabled, button.suggested-action.flat:backdrop:disabled {
+  popover.background button.suggested-action.flat:backdrop, popover.background button.suggested-action.flat:disabled, popover.background button.suggested-action.flat:backdrop:disabled, button.suggested-action.flat:backdrop, button.suggested-action.flat:disabled, button.suggested-action.flat:backdrop:disabled {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
@@ -684,19 +692,19 @@ button.suggested-action {
     text-shadow: none;
     -gtk-icon-shadow: none;
     color: rgba(136, 192, 208, 0.8); }
-  button.suggested-action:disabled {
+  popover.background button.suggested-action:disabled, button.suggested-action:disabled {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
     text-shadow: none; }
-    button.suggested-action:disabled:active, button.suggested-action:disabled:checked {
+    popover.background button.suggested-action:disabled:active, popover.background button.suggested-action:disabled:checked, button.suggested-action:disabled:active, button.suggested-action:disabled:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #88c0d0;
       text-shadow: none; }
-      button.suggested-action:disabled:active label, button.suggested-action:disabled:checked label {
+      popover.background button.suggested-action:disabled:active label, popover.background button.suggested-action:disabled:checked label, button.suggested-action:disabled:active label, button.suggested-action:disabled:checked label {
         color: rgba(254, 254, 254, 0.7); }
-  .osd button.suggested-action {
+  .osd popover.background button.suggested-action, popover.background .osd button.suggested-action, .osd button.suggested-action {
     color: #d8dee9;
     border-color: #1f232b;
     background-color: rgba(136, 192, 208, 0.5);
@@ -704,7 +712,7 @@ button.suggested-action {
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(216, 222, 233, 0.3); }
-    .osd button.suggested-action:hover {
+    .osd popover.background button.suggested-action:hover, popover.background .osd button.suggested-action:hover, .osd button.suggested-action:hover {
       color: white;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(136, 192, 208, 0.7), rgba(136, 192, 208, 0.7));
@@ -712,7 +720,7 @@ button.suggested-action {
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .osd button.suggested-action:active:backdrop, .osd button.suggested-action:active, .osd button.suggested-action:checked:backdrop, .osd button.suggested-action:checked {
+    .osd popover.background button.suggested-action:active:backdrop, popover.background .osd button.suggested-action:active:backdrop, .osd popover.background button.suggested-action:active, popover.background .osd button.suggested-action:active, .osd popover.background button.suggested-action:checked:backdrop, popover.background .osd button.suggested-action:checked:backdrop, .osd popover.background button.suggested-action:checked, popover.background .osd button.suggested-action:checked, .osd button.suggested-action:active:backdrop, .osd button.suggested-action:active, .osd button.suggested-action:checked:backdrop, .osd button.suggested-action:checked {
       color: white;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, #88c0d0, #88c0d0);
@@ -720,7 +728,7 @@ button.suggested-action {
       text-shadow: none;
       -gtk-icon-shadow: none;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .osd button.suggested-action:disabled:backdrop, .osd button.suggested-action:disabled {
+    .osd popover.background button.suggested-action:disabled:backdrop, popover.background .osd button.suggested-action:disabled:backdrop, .osd popover.background button.suggested-action:disabled, popover.background .osd button.suggested-action:disabled, .osd button.suggested-action:disabled:backdrop, .osd button.suggested-action:disabled {
       color: #808690;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(58, 63, 73, 0.5), rgba(58, 63, 73, 0.5));
@@ -728,7 +736,7 @@ button.suggested-action {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-    .osd button.suggested-action:backdrop {
+    .osd popover.background button.suggested-action:backdrop, popover.background .osd button.suggested-action:backdrop, .osd button.suggested-action:backdrop {
       color: #d8dee9;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(136, 192, 208, 0.5), rgba(136, 192, 208, 0.5));
@@ -736,54 +744,54 @@ button.suggested-action {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-button.destructive-action {
+popover.background button.destructive-action, button.destructive-action {
   border: none;
   box-shadow: none;
   color: white;
   border-radius: 4px;
   background: linear-gradient(to right, #bf616a, #bf616a); }
-  button.destructive-action.flat {
+  popover.background button.destructive-action.flat, button.destructive-action.flat {
     box-shadow: none;
     color: white;
     border-radius: 4px;
     background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
-  button.destructive-action:hover {
+  popover.background button.destructive-action:hover, button.destructive-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
     text-shadow: none; }
-  button.destructive-action:active, button.destructive-action:checked {
+  popover.background button.destructive-action:active, popover.background button.destructive-action:checked, button.destructive-action:active, button.destructive-action:checked {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
     text-shadow: none; }
-  button.destructive-action:backdrop, button.destructive-action.flat:backdrop {
+  popover.background button.destructive-action:backdrop, popover.background button.destructive-action.flat:backdrop, button.destructive-action:backdrop, button.destructive-action.flat:backdrop {
     color: rgba(255, 255, 255, 0.4);
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
     text-shadow: none; }
-    button.destructive-action:backdrop label, button.destructive-action.flat:backdrop label {
+    popover.background button.destructive-action:backdrop label, popover.background button.destructive-action.flat:backdrop label, button.destructive-action:backdrop label, button.destructive-action.flat:backdrop label {
       color: rgba(255, 255, 255, 0.5); }
-    button.destructive-action:backdrop:active, button.destructive-action:backdrop:checked, button.destructive-action.flat:backdrop:active, button.destructive-action.flat:backdrop:checked {
+    popover.background button.destructive-action:backdrop:active, popover.background button.destructive-action:backdrop:checked, popover.background button.destructive-action.flat:backdrop:active, popover.background button.destructive-action.flat:backdrop:checked, button.destructive-action:backdrop:active, button.destructive-action:backdrop:checked, button.destructive-action.flat:backdrop:active, button.destructive-action.flat:backdrop:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      button.destructive-action:backdrop:active label, button.destructive-action:backdrop:checked label, button.destructive-action.flat:backdrop:active label, button.destructive-action.flat:backdrop:checked label {
+      popover.background button.destructive-action:backdrop:active label, popover.background button.destructive-action:backdrop:checked label, popover.background button.destructive-action.flat:backdrop:active label, popover.background button.destructive-action.flat:backdrop:checked label, button.destructive-action:backdrop:active label, button.destructive-action:backdrop:checked label, button.destructive-action.flat:backdrop:active label, button.destructive-action.flat:backdrop:checked label {
         color: rgba(254, 254, 254, 0.7); }
-    button.destructive-action:backdrop:disabled, button.destructive-action.flat:backdrop:disabled {
+    popover.background button.destructive-action:backdrop:disabled, popover.background button.destructive-action.flat:backdrop:disabled, button.destructive-action:backdrop:disabled, button.destructive-action.flat:backdrop:disabled {
       color: white;
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #a9444e;
       text-shadow: none; }
-      button.destructive-action:backdrop:disabled label, button.destructive-action.flat:backdrop:disabled label {
+      popover.background button.destructive-action:backdrop:disabled label, popover.background button.destructive-action.flat:backdrop:disabled label, button.destructive-action:backdrop:disabled label, button.destructive-action.flat:backdrop:disabled label {
         color: rgba(255, 255, 255, 0.5); }
-      button.destructive-action:backdrop:disabled:active, button.destructive-action:backdrop:disabled:checked, button.destructive-action.flat:backdrop:disabled:active, button.destructive-action.flat:backdrop:disabled:checked {
+      popover.background button.destructive-action:backdrop:disabled:active, popover.background button.destructive-action:backdrop:disabled:checked, popover.background button.destructive-action.flat:backdrop:disabled:active, popover.background button.destructive-action.flat:backdrop:disabled:checked, button.destructive-action:backdrop:disabled:active, button.destructive-action:backdrop:disabled:checked, button.destructive-action.flat:backdrop:disabled:active, button.destructive-action.flat:backdrop:disabled:checked {
         color: rgba(254, 254, 254, 0.7);
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #81a1c1;
         text-shadow: none; }
-  button.destructive-action.flat:backdrop, button.destructive-action.flat:disabled, button.destructive-action.flat:backdrop:disabled {
+  popover.background button.destructive-action.flat:backdrop, popover.background button.destructive-action.flat:disabled, popover.background button.destructive-action.flat:backdrop:disabled, button.destructive-action.flat:backdrop, button.destructive-action.flat:disabled, button.destructive-action.flat:backdrop:disabled {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
@@ -791,19 +799,19 @@ button.destructive-action {
     text-shadow: none;
     -gtk-icon-shadow: none;
     color: rgba(169, 68, 78, 0.8); }
-  button.destructive-action:disabled {
+  popover.background button.destructive-action:disabled, button.destructive-action:disabled {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
     text-shadow: none; }
-    button.destructive-action:disabled:active, button.destructive-action:disabled:checked {
+    popover.background button.destructive-action:disabled:active, popover.background button.destructive-action:disabled:checked, button.destructive-action:disabled:active, button.destructive-action:disabled:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #a9444e;
       text-shadow: none; }
-      button.destructive-action:disabled:active label, button.destructive-action:disabled:checked label {
+      popover.background button.destructive-action:disabled:active label, popover.background button.destructive-action:disabled:checked label, button.destructive-action:disabled:active label, button.destructive-action:disabled:checked label {
         color: rgba(254, 254, 254, 0.7); }
-  .osd button.destructive-action {
+  .osd popover.background button.destructive-action, popover.background .osd button.destructive-action, .osd button.destructive-action {
     color: #d8dee9;
     border-color: #1f232b;
     background-color: rgba(169, 68, 78, 0.5);
@@ -811,7 +819,7 @@ button.destructive-action {
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(216, 222, 233, 0.3); }
-    .osd button.destructive-action:hover {
+    .osd popover.background button.destructive-action:hover, popover.background .osd button.destructive-action:hover, .osd button.destructive-action:hover {
       color: white;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(169, 68, 78, 0.7), rgba(169, 68, 78, 0.7));
@@ -819,7 +827,7 @@ button.destructive-action {
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .osd button.destructive-action:active:backdrop, .osd button.destructive-action:active, .osd button.destructive-action:checked:backdrop, .osd button.destructive-action:checked {
+    .osd popover.background button.destructive-action:active:backdrop, popover.background .osd button.destructive-action:active:backdrop, .osd popover.background button.destructive-action:active, popover.background .osd button.destructive-action:active, .osd popover.background button.destructive-action:checked:backdrop, popover.background .osd button.destructive-action:checked:backdrop, .osd popover.background button.destructive-action:checked, popover.background .osd button.destructive-action:checked, .osd button.destructive-action:active:backdrop, .osd button.destructive-action:active, .osd button.destructive-action:checked:backdrop, .osd button.destructive-action:checked {
       color: white;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, #a9444e, #a9444e);
@@ -827,7 +835,7 @@ button.destructive-action {
       text-shadow: none;
       -gtk-icon-shadow: none;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .osd button.destructive-action:disabled:backdrop, .osd button.destructive-action:disabled {
+    .osd popover.background button.destructive-action:disabled:backdrop, popover.background .osd button.destructive-action:disabled:backdrop, .osd popover.background button.destructive-action:disabled, popover.background .osd button.destructive-action:disabled, .osd button.destructive-action:disabled:backdrop, .osd button.destructive-action:disabled {
       color: #808690;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(58, 63, 73, 0.5), rgba(58, 63, 73, 0.5));
@@ -835,7 +843,7 @@ button.destructive-action {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-    .osd button.destructive-action:backdrop {
+    .osd popover.background button.destructive-action:backdrop, popover.background .osd button.destructive-action:backdrop, .osd button.destructive-action:backdrop {
       color: #d8dee9;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(169, 68, 78, 0.5), rgba(169, 68, 78, 0.5));
@@ -843,39 +851,42 @@ button.destructive-action {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-.stack-switcher > button {
+popover.background .stack-switcher > button, .stack-switcher > button {
   outline-offset: -3px; }
-  .stack-switcher > button > label {
+  popover.background .stack-switcher > button > label, .stack-switcher > button > label {
     padding-left: 6px;
     padding-right: 6px; }
-  .stack-switcher > button > image {
+  popover.background .stack-switcher > button > image, .stack-switcher > button > image {
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 3px;
     padding-bottom: 3px; }
-  .stack-switcher > button.text-button {
+  popover.background .stack-switcher > button.text-button, .stack-switcher > button.text-button {
     padding-left: 10px;
     padding-right: 10px; }
-  .stack-switcher > button.image-button {
+  popover.background .stack-switcher > button.image-button, .stack-switcher > button.image-button {
     padding-left: 2px;
     padding-right: 2px; }
-  .stack-switcher > button.needs-attention:active > label,
+  popover.background .stack-switcher > button.needs-attention:active > label,
+  popover.background .stack-switcher > button.needs-attention:active > image, popover.background .stack-switcher > button.needs-attention:checked > label,
+  popover.background .stack-switcher > button.needs-attention:checked > image, .stack-switcher > button.needs-attention:active > label,
   .stack-switcher > button.needs-attention:active > image, .stack-switcher > button.needs-attention:checked > label,
   .stack-switcher > button.needs-attention:checked > image {
     animation: none;
     background-image: none; }
-.inline-toolbar button, .inline-toolbar button:backdrop {
+.inline-toolbar popover.background button, popover.background .inline-toolbar button, .inline-toolbar popover.background button:backdrop, popover.background .inline-toolbar button:backdrop, .inline-toolbar button, .inline-toolbar button:backdrop {
   border-radius: 2px;
   border-width: 1px; }
-.primary-toolbar button, .primary-toolbar .raised button {
+.primary-toolbar popover.background button, popover.background .primary-toolbar button, .primary-toolbar .raised popover.background button, popover.background .primary-toolbar .raised button, .primary-toolbar button, .primary-toolbar .raised button {
   -gtk-icon-shadow: none; }
-  .primary-toolbar button:hover, .primary-toolbar button:focus, .primary-toolbar .raised button:hover, .primary-toolbar .raised button:focus {
+  .primary-toolbar popover.background button:hover, popover.background .primary-toolbar button:hover, .primary-toolbar popover.background button:focus, popover.background .primary-toolbar button:focus, .primary-toolbar .raised popover.background button:hover, popover.background .primary-toolbar .raised button:hover, .primary-toolbar .raised popover.background button:focus, popover.background .primary-toolbar .raised button:focus, .primary-toolbar button:hover, .primary-toolbar button:focus, .primary-toolbar .raised button:hover, .primary-toolbar .raised button:focus {
     color: #fefefe;
     outline-color: rgba(254, 254, 254, 0.3);
     background-color: #81a1c1;
     text-shadow: none; }
 
-.stack-switcher > button.needs-attention > label,
+popover.background .stack-switcher > button.needs-attention > label,
+popover.background .stack-switcher > button.needs-attention > image, .stack-switcher > button.needs-attention > label,
 .stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label {
   animation: needs_attention 150ms ease-in;
   background-image: radial-gradient(farthest-side, #b4c7da 96%, rgba(180, 199, 218, 0));
@@ -932,42 +943,42 @@ toolbar.inline-toolbar toolbutton:backdrop > button.flat:backdrop {
   border-color: transparent;
   box-shadow: none; }
 
-.inline-toolbar button, .inline-toolbar button:backdrop, .linked > button, .linked > button:hover, .linked > button:active, .linked > button:checked, .linked > button:backdrop, .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) >
+.inline-toolbar popover.background button, popover.background .inline-toolbar button, .inline-toolbar popover.background button:backdrop, popover.background .inline-toolbar button:backdrop, .inline-toolbar button, .inline-toolbar button:backdrop, popover.background .linked > button, popover.background .linked > button:hover, popover.background .linked > button:active, popover.background .linked > button:checked, popover.background .linked > button:backdrop, .linked > button, .linked > button:hover, .linked > button:active, .linked > button:checked, .linked > button:backdrop, .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) >
 entry, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
   border: 1px solid #262a34;
   border-radius: 0;
   border-right-style: none;
   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 
-.inline-toolbar button:first-child, .linked > button:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) >
+.inline-toolbar button:first-child, popover.background .linked > button:first-child, .linked > button:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) >
 entry:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px; }
-.inline-toolbar button:last-child, .linked > button:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) >
+.inline-toolbar button:last-child, popover.background .linked > button:last-child, .linked > button:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) >
 entry:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right-style: solid; }
-.inline-toolbar button:only-child, .linked > button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo, .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) >
+.inline-toolbar button:only-child, popover.background .linked > button:only-child, .linked > button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo, .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) >
 entry:only-child {
   border-radius: 3px;
   border-style: solid; }
 
-.linked.vertical > button, .linked.vertical > button:hover, .linked.vertical > button:active, .linked.vertical > button:checked, .linked.vertical > button:backdrop, .linked.vertical > spinbutton:not(.vertical), .linked.vertical >
+popover.background .linked.vertical > button, popover.background .linked.vertical > button:hover, popover.background .linked.vertical > button:active, popover.background .linked.vertical > button:checked, popover.background .linked.vertical > button:backdrop, .linked.vertical > button, .linked.vertical > button:hover, .linked.vertical > button:active, .linked.vertical > button:checked, .linked.vertical > button:backdrop, .linked.vertical > spinbutton:not(.vertical), .linked.vertical >
 entry, .linked.vertical > combobox > box > button.combo {
   border-style: solid solid none solid;
   border-radius: 0; }
 
-.linked.vertical > button:first-child, .linked.vertical > combobox:first-child > box > button.combo, .linked.vertical > spinbutton:first-child:not(.vertical), .linked.vertical >
+popover.background .linked.vertical > button:first-child, .linked.vertical > button:first-child, .linked.vertical > combobox:first-child > box > button.combo, .linked.vertical > spinbutton:first-child:not(.vertical), .linked.vertical >
 entry:first-child {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
-.linked.vertical > button:last-child, .linked.vertical > combobox:last-child > box > button.combo, .linked.vertical > spinbutton:last-child:not(.vertical), .linked.vertical >
+popover.background .linked.vertical > button:last-child, .linked.vertical > button:last-child, .linked.vertical > combobox:last-child > box > button.combo, .linked.vertical > spinbutton:last-child:not(.vertical), .linked.vertical >
 entry:last-child {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-style: solid; }
-.linked.vertical > button:only-child, .linked.vertical > combobox:only-child > box > button.combo, .linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical >
+popover.background .linked.vertical > button:only-child, .linked.vertical > button:only-child, .linked.vertical > combobox:only-child > box > button.combo, .linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical >
 entry:only-child {
   border-radius: 3px;
   border-style: solid; }
@@ -4642,7 +4653,7 @@ windowcontrols button.close, windowcontrols button.maximize, windowcontrols butt
     text-shadow: none;
     box-shadow: none;
     border: 1px solid #1f232b;
-    background-color: #282d37; }
+    background-color: #343b48; }
 windowcontrols button.close:hover, windowcontrols button.close:active {
   color: #bf616a; }
 windowcontrols button.maximize:hover, windowcontrols button.maximize:active {
@@ -5664,6 +5675,8 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
     margin: 0;
     -gtk-icon-size: 12px;
     padding: 0 4px; }
+  .nautilus-window #NautilusQueryEditor image {
+    color: #d8dee9; }
   .nautilus-window #NautilusQueryEditor > text, .nautilus-window #NautilusQueryEditor > image {
     margin: 0;
     color: #d8dee9; }
