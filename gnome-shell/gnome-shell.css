@@ -261,7 +261,6 @@ StScrollBar {
 
 /* End Session Dialog */
 .end-session-dialog {
-  spacing: 42px;
   border: none; }
   .end-session-dialog .modal-dialog-linked-button:last-child {
     background: #b84f59; }
@@ -1005,7 +1004,7 @@ StScrollBar {
   background-color: rgba(216, 222, 233, 0.1);
   border-radius: 99px; }
   .message-close-button:hover {
-    background-color: rgba(191, 97, 106, 0.3); }
+    background-color: rgba(191, 97, 106, 0.9); }
     .message-close-button:hover > StIcon {
       color: #fefefe; }
   .message-close-button:active {
