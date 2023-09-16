@@ -247,7 +247,6 @@ $slider_size: 19px;
 
 /* End Session Dialog */
 .end-session-dialog {
-  spacing: 42px;
   border: none;
   & .modal-dialog-linked-button:last-child {
     background: $error_color;
@@ -1185,7 +1184,7 @@ $slider_size: 19px;
             border-radius: 99px;
 
             &:hover {
-              background-color: transparentize($red, 0.7);
+              background-color: transparentize($red, 0.1);
                > StIcon { color: $selected_fg_color; }
             }
             &:active {
