@@ -5700,6 +5700,8 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   caret-color: #d8dee9; }
   .nautilus-window #NautilusQueryEditor #NautilusQueryEditorTag > button {
     margin: 0; }
+  .nautilus-window #NautilusQueryEditor > text {
+    background-color: transparent; }
   .nautilus-window #NautilusQueryEditor > menubutton > button {
     min-width: 16px;
     min-height: 16px;
