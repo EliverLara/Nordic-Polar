@@ -113,7 +113,8 @@
     background: lighten($headerbar_color, 2%); 
     color: $headerbar_fg_color;
     caret-color: $headerbar_fg_color;
-
+    border-color: $dark_borders_color;
+    &:focus-within { @include entry(focus); }
     #NautilusQueryEditorTag {
       > button {
         margin: 0;
@@ -123,11 +124,13 @@
     > text { background-color: transparent; }
     
     > menubutton > button {
-      min-width: 16px;
-      min-height: 16px;
-      margin: 0;
+      @include button(undecorated);
+      margin-right: -7px;
       -gtk-icon-size: 12px;
       padding: 0 4px;
+      &:hover, &:active, &:focus, &:checked {
+        image { color: #fff; }
+      }
     }
 
     image {
