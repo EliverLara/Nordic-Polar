@@ -58,7 +58,7 @@
   //elementary os file manager
   &.source-list{
     background: $_sidebar_color;
-    color: #98abb2;
+    color: $headerbar_fg_color;
     padding: 4px 0px;
     &.view{
       transition: all .12s ease-in;
@@ -129,7 +129,7 @@ placessidebar.sidebar, .nautilus-window .navigation-sidebar {
 		row{
 			&.sidebar-row {
         label { 
-          color: #98abb2; 
+          color: $headerbar_fg_color; 
           padding-left: 8px;
         }
         margin: 0;
@@ -141,7 +141,7 @@ placessidebar.sidebar, .nautilus-window .navigation-sidebar {
 						margin-right: 12px;
 						padding-left: 14px;
 						padding-right: 12px;
-						color: #98abb2;
+						color: $headerbar_fg_color;
 					}
 				}
 				&:hover{
