@@ -18,19 +18,19 @@
 
   &.csd { // rounded bottom border styling for csd version
     &.background {
-      background-color: transparentize(if($variant=='light', $headerbar_color, darken($main_dark_color, 5%)), 0.05);
-      color: if($variant=='light', $headerbar_fg_color, $fg_color);
+      background-color: transparentize(if($variant=='light', $base_color, darken($main_dark_color, 5%)), 0.05);
+      color: $fg_color;
 
       // bigger radius for better antialiasing
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
 
-    .dialog-action-area button, button {
+    .dialog-action-area button, .response-area button {
       padding: 7px 11px; // labels are not vertically centered on message dialog, this is a workaround
       border-radius: 0;
       background-color: transparent;
-      color: if($variant=='light', $headerbar_fg_color, $fg_color);
+      color: $fg_color;
       box-shadow: none;
       border: none;
 
