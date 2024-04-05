@@ -17,16 +17,19 @@ stage {
 /* WIDGETS */
 
 /* Buttons */
-.button, %button {
+.button, .icon-button, %button {
   @include button(normal);
-  border-radius: 6px;
-  padding: 4px 32px;
   &:focus { @include button(focus); }
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
   &:hover {
     @include button(hover);
   }
+}
+
+.button {
+  border-radius: 6px;
+  padding: 4px 32px;
 }
 
 .modal-dialog-linked-button {
@@ -568,7 +571,7 @@ $slider_size: 19px;
   spacing: 6px;
   border-radius: 6px;
   background-gradient-direction: none;
-  color: $fg_color;
+  color: $fg_color !important;
 
   &:ltr {padding-left: 6px;}
   &:rtl {padding-right: 6px;}
@@ -705,6 +708,7 @@ $slider_size: 19px;
   .switcher-list .item-box {
     padding: 8px;
     border-radius: 4px;
+    background-color: transparent;
   }
 
   .switcher-list .item-box:outlined {
@@ -1002,6 +1006,7 @@ $slider_size: 19px;
     }
 
     .calendar-month-label {
+      background-color: transparent;
       color: darken($fg_color,5%);
       font-weight: bold;
       padding: 8px 0;
@@ -1040,6 +1045,7 @@ $slider_size: 19px;
       border-radius: 99px;
       color: $fg_color;
       background-gradient-direction: none;
+      background-color: transparent;
       
       &:hover, &:focus { 
         background-color: lighten($bg_color, 7%);
@@ -1051,11 +1057,12 @@ $slider_size: 19px;
         border-color: transparent; //avoid jumparound due to today
         box-shadow: inset 0 0 0 2px transparentize($selected_bg_color, 0.4) !important;
       }
-      &.calendar-day-heading {  //day of week heading
-        color: $fg_color;
-        margin-top: 1em;
-        font-size: 70%;
-      }
+    }
+    .calendar-day-heading {  //day of week heading
+      background-color: transparent;
+      color: $fg_color;
+      margin-top: 1em;
+      font-size: 70%;
     }
       .calendar-day { //border collapse hack - see calendar.js
         border-width: 0;
@@ -1113,7 +1120,7 @@ $slider_size: 19px;
       .message-list {
         border-color: lighten($base_color, 4%);
       }
-      
+
       .message-title, .message-content, .message-body {
         color: darken($fg_color, 5%);
       }
@@ -1143,13 +1150,13 @@ $slider_size: 19px;
 
         .message {
           &:hover,&:focus { 
-            background-color: lighten($bg_color, 3%);
+            background-color: lighten($bg_color, 4%);
             box-shadow: 3px 0px 0px 0px $selected_bg_color inset;
             border-radius: 1px 7px 7px 1px;
            }
-          border: 1px solid $borders_color;
+          border: none;
           border-radius: 7px;
-          background: lighten($bg_color, 1%);
+          background: lighten($bg_color, 2%);
           box-shadow: none;
         }
 
@@ -1453,6 +1460,7 @@ $slider_size: 19px;
 //search results
 
 %search-section-content-item {  
+  background-color: transparent;
   &:focus,
   &:hover,
   &:selected {
@@ -1563,8 +1571,10 @@ $slider_size: 19px;
 .app-well-app,
 .app-well-app.app-folder,
 .show-apps,
-.grid-search-result {
-  
+.grid-search-result,
+.overview-tile,
+.dash-item-container .overview-tile {
+  background-color: transparent;
   border: none;
   & .overview-icon {
     @extend %icon_tile;
@@ -1588,7 +1598,7 @@ $slider_size: 19px;
 
 }
 
-.app-well-app-running-dot { //running apps indicator
+.app-well-app-running-dot, .app-grid-running-dot { //running apps indicator
   width: 5px; height: 5px;
   background-color: $selected_bg_color;
   border-radius: 5px !important;
@@ -1607,8 +1617,8 @@ $slider_size: 19px;
 }
 
 /* App Folders */
-.app-well-app.app-folder {
-  background-color: lighten($bg_color, 7%);
+.app-well-app.app-folder, .app-folder .overview-icon {
+  background-color: lighten($bg_color, 5%);
   border-radius: 18px;
 }
 // expanded folder
@@ -1712,9 +1722,9 @@ $slider_size: 19px;
     // horizontal padding to make sure scrollbars or dash don't overlap content
     padding: 0px 88px 10px 88px;
   }
-  
+
 .page-navigation-arrow {
- 
+  background-color: transparent;
   margin: 6px;
   padding: 18px;
   width: 24px;
@@ -2233,55 +2243,55 @@ $slider_size: 19px;
   .quick-settings {
     padding: 14px;
     border-radius: 12px;
-  
+
     .icon-button, .button {
       padding: 6px*1.75;
       color: $fg_color;
     }
   }
-  
+
   $base_padding: 6px;
-  
+
   .quick-toggle {
     border-radius: 99px;
-  
+
     &:checked { 
       @include button(active, transparentize($selected_bg_color, 0.4));
       &:hover { @include button(active, transparentize(lighten($selected_bg_color, 6%), 0.4)); }
       &, &:hover { color: $selected_fg_color; }
     }
-  
+
     &, &:hover, &:checked, &:checked:hover { border: none; }
-  
+
     & > StBoxLayout { spacing: $base_padding; }
-  
+
     /* Move padding into the box; this is to allow menu arrows
-       to extend to the border */
+        to extend to the border */
     &.button { padding: 0; }
     & > StBoxLayout { padding: 0 6px*2; }
     &:ltr > StBoxLayout { padding-left: $base_padding*2.5; }
     &:rtl > StBoxLayout { padding-right: $base_padding*2.5; }
-  
+
     .quick-toggle-label { font-weight: bold; }
     //.quick-toggle-icon, .quick-toggle-arrow { icon-size: $base_icon_size; }
   }
-  
+
   .quick-menu-toggle {
     &:ltr > StBoxLayout { padding-right: 0; }
     &:rtl > StBoxLayout { padding-left: 0; }
-  
+
     & .quick-toggle {
       min-width: auto;
       max-width: auto;
-  
+
       &:ltr { border-radius: 99px 0 0 99px; }
       &:rtl { border-radius: 0 99px 99px 0; }
-  
+
       &:ltr:last-child { border-radius: 99px; }
       &:rtl:last-child { border-radius: 99px; }
     }
-  
-  
+
+
     & .quick-toggle-arrow {
       background-color: lighten($base_color, 1%);
       padding: $base_padding $base_padding*1.75;
@@ -2298,11 +2308,13 @@ $slider_size: 19px;
       &:hover {
         background-color: lighten($base_color, 5%);
       }
-  
+    
+
       &:ltr { border-radius: 0 99px 99px 0; }
       &:rtl { border-radius: 99px 0 0 99px; }
     }
   }
+    
   .quick-toggle-menu {
     background-color: $base_color !important;
     border-radius: 12px;
