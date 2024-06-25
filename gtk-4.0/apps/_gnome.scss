@@ -239,3 +239,18 @@
   background: transparent;
   border: none;
 }
+
+/*******************
+ * Calendar events *
+********************/
+.color-light {
+  &.timed label, .event-popover label {
+    color: $fg_color;
+    opacity: 1;
+  }
+  & label {
+    color: $fg_color;
+    opacity: 1;
+  }
+}
+.circular.day { color: $headerbar_fg_color; }
