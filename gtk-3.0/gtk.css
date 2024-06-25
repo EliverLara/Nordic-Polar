@@ -5510,6 +5510,16 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   background: transparent;
   border: none; }
 
+/*******************
+ * Calendar events *
+********************/
+.color-light.timed label {
+  color: #3b4252;
+  opacity: 1; }
+.week-view .color-light.timed label, .color-light label, .year-view .color-light:not(.timed) label {
+  color: #3b4252;
+  opacity: 1; }
+
 /********
  * Gala *
  *******/
