@@ -647,7 +647,8 @@ popover.background button.suggested-action, button.suggested-action {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
-    text-shadow: none; }
+    text-shadow: none;
+    opacity: 0.85; }
   popover.background button.suggested-action:active, popover.background button.suggested-action:checked, button.suggested-action:active, button.suggested-action:checked {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
@@ -691,7 +692,8 @@ popover.background button.suggested-action, button.suggested-action {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
-    text-shadow: none; }
+    text-shadow: none;
+    opacity: 0.75; }
     popover.background button.suggested-action:disabled:active, popover.background button.suggested-action:disabled:checked, button.suggested-action:disabled:active, button.suggested-action:disabled:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
@@ -754,7 +756,8 @@ popover.background button.destructive-action, button.destructive-action {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
-    text-shadow: none; }
+    text-shadow: none;
+    opacity: 0.85; }
   popover.background button.destructive-action:active, popover.background button.destructive-action:checked, button.destructive-action:active, button.destructive-action:checked {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
@@ -798,7 +801,8 @@ popover.background button.destructive-action, button.destructive-action {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
-    text-shadow: none; }
+    text-shadow: none;
+    opacity: 0.75; }
     popover.background button.destructive-action:disabled:active, popover.background button.destructive-action:disabled:checked, button.destructive-action:disabled:active, button.destructive-action:disabled:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
@@ -4710,7 +4714,7 @@ windowcontrols button.close, windowcontrols button.maximize, windowcontrols butt
     border-color: transparent; }
   windowcontrols button.close:checked, windowcontrols button.close:hover, windowcontrols button.close:backdrop:hover, windowcontrols button.maximize:checked, windowcontrols button.maximize:hover, windowcontrols button.maximize:backdrop:hover, windowcontrols button.minimize:checked, windowcontrols button.minimize:hover, windowcontrols button.minimize:backdrop:hover {
     color: #d8dee9;
-    border-radius: 4px;
+    border-radius: 6px;
     text-shadow: none;
     box-shadow: none;
     border: 1px solid #1f232b;
