@@ -4,14 +4,12 @@
 %titlebar,
 headerbar {
   padding: 0 6px;
-  min-height: 34px;
-  background: $headerbar_color;;
+  min-height: 38px;
+  background: $headerbar_color;
   color: $headerbar_fg_color;
   border-radius: 0;
   &:backdrop {
     border-color: $backdrop_borders_color;
-   // background-image: none;
-
     transition: $backdrop_transition;
   }
 
@@ -28,29 +26,12 @@ headerbar {
 
     @extend .dim-label;
   }
- 
-  entry {
-    min-height: 24px; 
-    
-  }  
+
+  entry { min-height: 24px; }  
   
   button {
     @include button(normal-header);
-    min-height: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    box-shadow: none;
-    &.image-button{
-       padding: 3px 4px;
-    }
-
-    &.appmenu{
-      background: transparent;
-      &:backdrop{background: transparent;}
-    }
-    &:hover {
-      @include button(hover-header, $selected_bg_color, #fff);
-    }
+    border-color: $dark_borders_color;
     &:active,
     &:checked {
       @include button(active, $selected_bg_color, #fff);
@@ -62,85 +43,11 @@ headerbar {
     &:backdrop:disabled {
       @include button(backdrop-header, darken($main_dark_color, 3%), transparentize($headerbar_fg_color,0.8));
     }
-
-    &:backdrop {
-      &:hover,
-      &:active,
-      &:checked {
-        @include button(backdrop-header, $backdrop_selected_bg_color, $selected_bg_color);
-      }
-    }
-
-    &.suggested-action{
-      box-shadow: none;
-      border: none;
-      background-image: $suggested_bg_color;
-        &:disabled, &:disabled:backdrop, &:backdrop {
-          border: none;
-          background-image: $suggested_bg_color;
-          &:hover,
-          &:active,
-          &:checked {
-            border: none;
-            background-image: $suggested_bg_color;
-          }
-        }
-      }
-
-    @each $b_type, $b_color in (suggested-action, $cyan),
-                               (destructive-action, $destructive_color) {
-      &.#{$b_type} {
-        font-weight: bold;
-        min-height: 14px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        border-radius: 6px;
-        @include button(normal, $b_color, white);
-        box-shadow: none;
-
-        &:hover { @include button(hover, $b_color, white); }
-
-        &:active { @include button(active, $b_color, white); }
-
-        &:disabled {
-          @include button(insensitive, $b_color, white);
-          label {color: transparentize(white,0.5);}
-        }
-
-        &:backdrop {
-          @include button(backdrop, $b_color, white);
-          border-radius: 6px;
-        }
-
-        &:backdrop:disabled { @include button(backdrop-insensitive, $b_color, white); }
-
-      }
-    }
-
-    //Reset style
-    &.titlebutton {
-      color: transparent;
-      box-shadow: none;
-      border: none;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      &:hover,
-      &:active,
-      &:checked,
-      &:backdrop,
-      &:backdrop:hover,* {
-        color: transparent;
-        box-shadow: none;
-        background-color: transparent;
-      }
-    }
   }
   %linked-header {
     border-radius: 0;
     border-right-style: none;
     box-shadow: none;
-    margin: 5px 0px;
-    min-height: 20px;
     &:first-child {
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
@@ -159,6 +66,7 @@ headerbar {
   }
   %linked-button {
     @extend %linked-header;
+    border-color: $dark_borders_color;
     &:active, &:checked {
       @include button(active, $selected_bg_color, #fff);
       &:backdrop{
@@ -189,7 +97,6 @@ headerbar {
   }
   
   // End reset style
-
 
   .path-bar-box {
     .dim-label {
@@ -306,9 +213,9 @@ headerbar {
 
 headerbar {
   window:not(.tiled):not(.maximized) separator:first-child + &, // tackles the paned container case
-  window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: 4px; }}
+  window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: 6px; }}
 
-  window:not(.tiled):not(.maximized) &:last-child { &:backdrop, & { border-top-right-radius: 4px; }}
+  window:not(.tiled):not(.maximized) &:last-child { &:backdrop, & { border-top-right-radius: 6px; }}
 }
 
 .titlebar:not(headerbar) {
@@ -343,9 +250,4 @@ headerbar {
       background-color: $headerbar_color;
     }
   }
-}
-
-.nautilus-window .sidebar-pane .top-bar headerbar {
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
