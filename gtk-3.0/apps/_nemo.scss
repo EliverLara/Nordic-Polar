@@ -35,28 +35,31 @@
         }
     }
 
-    toolbar.primary-toolbar {
+    toolbar.primary-toolbar  {
         margin-bottom: -1px;
         background: $headerbar_color;
-        button {
-            @include button(normal-header);
-            min-height: 24px;
-            padding: 3px;
-            &:hover { @include button(hover-header, $selected_bg_color, $selected_fg_color); }
-
-            &:selected,
-            &:active,
-            &:checked { 
-                @include button(active, $selected_bg_color, $selected_fg_color); 
-                &:backdrop {
-                    @include button(backdrop-header, $backdrop_selected_bg_color, $backdrop_selected_fg_color);
+        .path-bar {
+            button {
+                @include button(normal-header);
+                border-radius: 0;
+                min-height: 24px;
+                margin-right: -2px;
+                &:hover { @include button(hover-header, $selected_bg_color, $selected_fg_color); }
+    
+                &:selected,
+                &:active,
+                &:checked { 
+                    @include button(active, $selected_bg_color, $selected_fg_color); 
+                    &:backdrop {
+                        @include button(backdrop-header, $backdrop_selected_bg_color, $backdrop_selected_fg_color);
+                    }
                 }
-            }
-
-            &:backdrop,
-            &:disabled,
-            &:backdrop:disabled {
-                @include button(backdrop-header, $main_dark_color, transparentize($headerbar_fg_color, 0.8));
+    
+                &:backdrop,
+                &:disabled,
+                &:backdrop:disabled {
+                    @include button(backdrop-header, $main_dark_color, transparentize($headerbar_fg_color, 0.8));
+                }
             }
         }
     }
