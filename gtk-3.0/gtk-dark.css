@@ -6283,38 +6283,45 @@ ConversationListView {
 .nemo-window toolbar.primary-toolbar {
   margin-bottom: -1px;
   background: #2b313c; }
-  .nemo-window toolbar.primary-toolbar .path-bar button {
+  .nemo-window toolbar.primary-toolbar button, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button {
     color: #d8dee9;
     border-radius: 4px;
     text-shadow: none;
     box-shadow: none;
     border: 1px solid #1f232b;
-    background-color: #343b48;
-    border-radius: 0;
-    min-height: 24px;
-    margin-right: -2px; }
-    .nemo-window toolbar.primary-toolbar .path-bar button:hover {
+    background-color: #343b48; }
+    .nemo-window toolbar.primary-toolbar button:hover, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:hover {
       color: #fefefe;
       text-shadow: none;
       background-color: rgba(129, 161, 193, 0.8);
       border-color: #1f232b; }
-    .nemo-window toolbar.primary-toolbar .path-bar button:selected, .nemo-window toolbar.primary-toolbar .path-bar button:active, .nemo-window toolbar.primary-toolbar .path-bar button:checked {
+    .nemo-window toolbar.primary-toolbar button:selected, .nemo-window toolbar.primary-toolbar button:active, .nemo-window toolbar.primary-toolbar button:checked, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:selected, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:active, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:checked {
       color: #fefefe;
       outline-color: rgba(254, 254, 254, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      .nemo-window toolbar.primary-toolbar .path-bar button:selected:backdrop, .nemo-window toolbar.primary-toolbar .path-bar button:active:backdrop, .nemo-window toolbar.primary-toolbar .path-bar button:checked:backdrop {
+      .nemo-window toolbar.primary-toolbar button:selected:backdrop, .nemo-window toolbar.primary-toolbar button:active:backdrop, .nemo-window toolbar.primary-toolbar button:checked:backdrop, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:selected:backdrop, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:active:backdrop, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:checked:backdrop {
         color: rgba(254, 254, 254, 0.5);
         background-color: rgba(129, 161, 193, 0.6);
         border-color: #1f232b;
         text-shadow: none;
         box-shadow: none; }
-    .nemo-window toolbar.primary-toolbar .path-bar button:backdrop, .nemo-window toolbar.primary-toolbar .path-bar button:disabled, .nemo-window toolbar.primary-toolbar .path-bar button:backdrop:disabled {
+    .nemo-window toolbar.primary-toolbar button:backdrop, .nemo-window toolbar.primary-toolbar button:disabled, .nemo-window toolbar.primary-toolbar button:backdrop:disabled, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:backdrop, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:disabled, .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button:backdrop:disabled {
       color: rgba(216, 222, 233, 0.2);
       background-color: #2e3440;
       border-color: #1f232b;
       text-shadow: none;
       box-shadow: none; }
+  .nemo-window toolbar.primary-toolbar .path-bar button {
+    border-radius: 0;
+    margin-right: -1px; }
+    .nemo-window toolbar.primary-toolbar .path-bar button:first-child {
+      border-radius: 4px 0px 0px 4px; }
+    .nemo-window toolbar.primary-toolbar .path-bar button:last-child {
+      border-radius: 0px 4px 4px 0px; }
+  .nemo-window toolbar.primary-toolbar .horizontal > button.flat.image-button {
+    background: transparent;
+    border: none; }
 .nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview,
 .nemo-window .nemo-inactive-pane iconview {
   background-color: #353b49; }
