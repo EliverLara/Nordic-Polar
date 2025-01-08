@@ -112,3 +112,9 @@ infobar {
     background-color: transparent;
   }
 }
+
+// Gnome 47 info bars
+banner revealer widget {
+  background: $suggested_bg_color;
+  padding: 5px;
+}
