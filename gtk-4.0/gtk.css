@@ -2569,6 +2569,10 @@ infobar {
   color: #bf616a;
   background-color: transparent; }
 
+banner revealer widget {
+  background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%);
+  padding: 5px; }
+
 levelbar.horizontal trough > block {
   min-height: 5px;
   border-radius: 5px; }
