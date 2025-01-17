@@ -2564,7 +2564,8 @@ infobar {
 
 banner revealer widget {
   background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%);
-  padding: 5px; }
+  padding: 5px;
+  color: #3b4252; }
 
 levelbar.horizontal trough > block {
   min-height: 5px;
@@ -2685,6 +2686,11 @@ row.activatable:selected.has-open-popup, row.activatable:selected:hover {
   background-color: rgba(129, 161, 193, 0.5); }
 row.activatable:selected:backdrop {
   background-color: rgba(129, 161, 193, 0.6); }
+row.activatable.button {
+  font-weight: normal;
+  color: #d8dee9;
+  background-color: #3c4454;
+  text-shadow: none; }
 row .view, row iconview {
   background-color: transparent; }
 
@@ -2749,6 +2755,9 @@ columnview.complex.data-table > listview > row > cell {
   columnview.complex.data-table > listview > row > cell > * {
     padding-top: 2px;
     padding-bottom: 2px; }
+
+.boxed-list-separate, .boxed-list-separate:backdrop {
+  background-color: transparent; }
 
 /*********
  * Menus *
