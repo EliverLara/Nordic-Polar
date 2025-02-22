@@ -271,6 +271,11 @@ flowbox flowboxchild {
   flowbox flowboxchild:selected {
     outline-offset: -2px; }
 
+gridview > child {
+  padding: 7px; }
+  gridview > child box {
+    border-spacing: 5px; }
+
 label {
   caret-color: currentColor; }
   label.separator {
@@ -6018,6 +6023,32 @@ panel-toplevel.background button:not(#tasklist-button) {
 .-vala-panel-appmenu-private > menuitem,
 .-vala-panel-appmenu-private > menuitem:first-child > label {
   color: #d8dee9; }
+
+#XfceNotifyWindow {
+  background-color: #2a2f3a;
+  border-radius: 12px;
+  border-width: 1px;
+  border: 1px solid #1f232b;
+  color: #3b4252;
+  padding: 40px; }
+  #XfceNotifyWindow:hover, #XfceNotifyWindow:focus {
+    background-color: #2e3440; }
+  #XfceNotifyWindow label, #XfceNotifyWindow image {
+    color: #d8dee9; }
+  #XfceNotifyWindow button {
+    color: #d8dee9;
+    border-radius: 6px;
+    text-shadow: none;
+    box-shadow: none;
+    border: 1px solid #1f232b;
+    background-color: #343b48; }
+    #XfceNotifyWindow button:hover {
+      color: #3b4252;
+      outline-color: rgba(59, 66, 82, 0.3);
+      background-color: #81a1c1;
+      text-shadow: none; }
+      #XfceNotifyWindow button:hover label {
+        color: #fefefe; }
 
 /********
 * Unity *
