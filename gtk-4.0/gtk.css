@@ -1627,25 +1627,8 @@ messagedialog, .messagedialog, .dialog {
     color: #3b4252;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px; }
-  messagedialog.csd .dialog-action-area button, messagedialog.csd .response-area button, .messagedialog.csd .dialog-action-area button, .messagedialog.csd .response-area button, .dialog.csd .dialog-action-area button, .dialog.csd .response-area button {
-    padding: 7px 11px;
-    border-radius: 0;
-    background-color: transparent;
-    color: #3b4252;
-    box-shadow: none;
-    border: none; }
-    messagedialog.csd .dialog-action-area button:hover, messagedialog.csd .response-area button:hover, .messagedialog.csd .dialog-action-area button:hover, .messagedialog.csd .response-area button:hover, .dialog.csd .dialog-action-area button:hover, .dialog.csd .response-area button:hover {
-      background-color: rgba(129, 161, 193, 0.9);
-      color: white; }
-    messagedialog.csd .dialog-action-area button:first-child, messagedialog.csd .response-area button:first-child, .messagedialog.csd .dialog-action-area button:first-child, .messagedialog.csd .response-area button:first-child, .dialog.csd .dialog-action-area button:first-child, .dialog.csd .response-area button:first-child {
-      border-left-style: none;
-      border-bottom-left-radius: 4px; }
-    messagedialog.csd .dialog-action-area button:last-child, messagedialog.csd .response-area button:last-child, .messagedialog.csd .dialog-action-area button:last-child, .messagedialog.csd .response-area button:last-child, .dialog.csd .dialog-action-area button:last-child, .dialog.csd .response-area button:last-child {
-      border-bottom-right-radius: 4px; }
-    messagedialog.csd .dialog-action-area button.destructive-action, messagedialog.csd .dialog-action-area button.suggested-action, messagedialog.csd .response-area button.destructive-action, messagedialog.csd .response-area button.suggested-action, .messagedialog.csd .dialog-action-area button.destructive-action, .messagedialog.csd .dialog-action-area button.suggested-action, .messagedialog.csd .response-area button.destructive-action, .messagedialog.csd .response-area button.suggested-action, .dialog.csd .dialog-action-area button.destructive-action, .dialog.csd .dialog-action-area button.suggested-action, .dialog.csd .response-area button.destructive-action, .dialog.csd .response-area button.suggested-action {
-      color: white; }
 
-.messagedialog .message-area {
+.messagedialog .message-area, .messagedialog .response-area, .dialog .dialog-action-area {
   padding: 26px; }
 
 filechooser .dialog-action-box {
