@@ -160,3 +160,24 @@
   }
 }
 .circular.day { color: $headerbar_fg_color; }
+
+/*******************
+ * Calendar sidebar *
+********************/
+datechooser {
+  &, &:backdrop { background-color: $headerbar_color; }
+  button { color: $headerbar_fg_color; }
+  .circular.day.flat.text-button{ 
+    &.other-month, &.non-workday {
+      color: $insensitive_fg_color;
+    }
+  } //non-workday
+}
+
+agenda-view list.background {
+  &, &:backdrop { background-color: $headerbar_color; }
+  padding: 8px;
+  .caption-heading, .dim-label.no-events {
+    color: $headerbar_fg_color;
+  }
+}
