@@ -165,13 +165,22 @@
  * Calendar sidebar *
 ********************/
 datechooser {
-  &, &:backdrop { background-color: $headerbar_color; }
-  button { color: $headerbar_fg_color; }
-  .circular.day.flat.text-button{ 
-    &.other-month, &.non-workday {
+  &, &:backdrop { background-color: $headerbar_color; opacity: 1; }
+  .circular.day.text-button{ 
+    padding: 6px;
+    border-radius: 50%;
+    min-height: 22px;
+    min-width: 22px;
+    border: none;
+    &.flat.other-month, &.flat.non-workday {
       color: $insensitive_fg_color;
     }
-  } //non-workday
+    &.today { color: $selected_bg_color; }
+    &:active, &:selected { 
+      @include button(active, $selected_bg_color, $selected_fg_color);
+      font-weight: bold;
+    }
+  }
 }
 
 agenda-view list.background {
