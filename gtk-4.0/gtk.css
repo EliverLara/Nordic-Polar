@@ -5792,6 +5792,13 @@ agenda-view list.background {
   headerbar agenda-view list.background .no-events.subtitle {
     color: #d8dee9; }
 
+/******************************
+ * Gnome system monitor graph *
+******************************/
+#gnome-system-monitor .loadgraph {
+  background: #d8dee9;
+  color: #3b4252; }
+
 /********
  * Gala *
  *******/
