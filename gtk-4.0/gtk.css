@@ -4206,18 +4206,19 @@ placessidebar {
     placessidebar list:backdrop {
       background-color: transparent; }
 
-.sidebar-pane .bottom-bar {
+.sidebar-pane, .sidebar-pane .bottom-bar {
   background-color: #282d37; }
-  .sidebar-pane .bottom-bar button {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
-    .sidebar-pane .bottom-bar button .view, .sidebar-pane .bottom-bar button iconview {
-      background-color: transparent;
-      color: #d8dee9; }
+.sidebar-pane .bottom-bar button {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+  text-shadow: none;
+  -gtk-icon-shadow: none; }
+  .sidebar-pane .bottom-bar button label {
+    color: #d8dee9; }
+  .sidebar-pane .bottom-bar button .view, .sidebar-pane .bottom-bar button iconview {
+    background-color: transparent; }
 
 /*****************
  * GtkSpinButton *
@@ -5753,44 +5754,63 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
 .color-light.timed label, .color-light .event-popover label {
   color: #3b4252;
   opacity: 1; }
-.color-light label {
-  color: #3b4252;
-  opacity: 1; }
-
-.circular.day {
-  color: #d8dee9; }
 
 /*******************
  * Calendar sidebar *
 ********************/
-datechooser, datechooser:backdrop {
-  background-color: #2b313c;
-  opacity: 1; }
+datechooser button {
+  color: #d8dee9; }
 datechooser .circular.day.text-button {
   padding: 6px;
   border-radius: 50%;
   min-height: 22px;
   min-width: 22px;
-  border: none; }
+  border: none;
+  color: #d8dee9; }
   datechooser .circular.day.text-button.flat.other-month, datechooser .circular.day.text-button.flat.non-workday {
     color: #8a909e; }
   datechooser .circular.day.text-button.today {
-    color: #81a1c1; }
+    color: #5e81ac; }
   datechooser .circular.day.text-button:active, datechooser .circular.day.text-button:selected {
     color: #fefefe;
     outline-color: rgba(254, 254, 254, 0.3);
     background-color: #81a1c1;
     text-shadow: none;
     font-weight: bold; }
+datechooser .weekday, datechooser .weeknum {
+  color: #8a909e; }
+datechooser .weeknum {
+  background-color: #303643; }
+datechooser .current-week {
+  background-color: rgba(138, 144, 158, 0.1); }
+
+popover datechooser {
+  background-color: #e5e9f0; }
+  popover datechooser button {
+    color: #3b4252; }
+  popover datechooser .circular.day.text-button {
+    color: #3b4252; }
+  popover datechooser .weeknum {
+    background-color: #d8dee9; }
 
 agenda-view list.background {
   padding: 8px; }
-  agenda-view list.background, agenda-view list.background:backdrop {
-    background-color: #2b313c; }
   agenda-view list.background .caption-heading, agenda-view list.background .dim-label.no-events, agenda-view list.background label.no-events.separator, agenda-view list.background .titlebar .no-events.subtitle, .titlebar agenda-view list.background .no-events.subtitle,
   agenda-view list.background headerbar .no-events.subtitle,
   headerbar agenda-view list.background .no-events.subtitle {
     color: #d8dee9; }
+
+datechooser, datechooser:backdrop,
+agenda-view list.background,
+agenda-view list.background:backdrop,
+.calendar-list,
+.calendar-list:backdrop {
+  background-color: #282d37; }
+
+.calendar-list row, .calendar-list label {
+  color: #d8dee9; }
+.calendar-list row:hover {
+  background-color: #303643; }
 
 /******************************
  * Gnome system monitor graph *
