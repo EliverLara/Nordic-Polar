@@ -154,42 +154,68 @@
     color: $fg_color;
     opacity: 1;
   }
-  & label {
-    color: $fg_color;
-    opacity: 1;
-  }
+  // & label {
+  //   color: $nord0;
+  //   opacity: 1;
+  // }
 }
-.circular.day { color: $headerbar_fg_color; }
 
 /*******************
  * Calendar sidebar *
 ********************/
 datechooser {
-  &, &:backdrop { background-color: $headerbar_color; opacity: 1; }
+  button { color: $headerbar_fg_color;}
   .circular.day.text-button{ 
     padding: 6px;
     border-radius: 50%;
     min-height: 22px;
     min-width: 22px;
     border: none;
+    color: $headerbar_fg_color;
     &.flat.other-month, &.flat.non-workday {
       color: $insensitive_fg_color;
     }
-    &.today { color: $selected_bg_color; }
+    &.today { color: $blue; }
     &:active, &:selected { 
       @include button(active, $selected_bg_color, $selected_fg_color);
       font-weight: bold;
     }
   }
+  .weekday, .weeknum { color: $insensitive_fg_color;}
+  .weeknum { background-color: lighten($_sidebar_color, 4%);}
+  .current-week { background-color: transparentize($insensitive_fg_color, 0.9);}
+}
+
+// Calendar popover on Gnome 49
+popover datechooser {
+  background-color: $base_color;
+  button { color: $fg_color;}
+  .circular.day.text-button{ 
+    color: $fg_color;
+  }
+  .weeknum { background-color: darken($base_color, 4%);}
 }
 
 agenda-view list.background {
-  &, &:backdrop { background-color: $headerbar_color; }
   padding: 8px;
   .caption-heading, .dim-label.no-events {
     color: $headerbar_fg_color;
   }
 }
+
+datechooser,
+agenda-view list.background,
+.calendar-list {
+  &, &:backdrop { background-color: $_sidebar_color; }
+}
+
+
+// List of calendars on Gnome 49
+.calendar-list { 
+  row, label {color: $headerbar_fg_color; } 
+  row:hover { background-color: lighten($_sidebar_color, 4%);}
+}
+
 
 /******************************
  * Gnome system monitor graph *
