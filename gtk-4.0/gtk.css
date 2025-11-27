@@ -672,14 +672,18 @@ button.osd {
 popover.background button.suggested-action, button.suggested-action {
   border: none;
   box-shadow: none;
-  color: white;
+  color: #fff;
   border-radius: 6px;
   background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
+  popover.background button.suggested-action label, button.suggested-action label {
+    color: #fff; }
   popover.background button.suggested-action.flat, .selection-mode windowcontrols button, button.suggested-action.flat {
     box-shadow: none;
-    color: white;
+    color: #fff;
     border-radius: 6px;
     background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
+    popover.background button.suggested-action.flat label, .selection-mode windowcontrols button label, button.suggested-action.flat label {
+      color: #fff; }
   popover.background button.suggested-action:hover, button.suggested-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
@@ -781,14 +785,18 @@ popover.background button.suggested-action, button.suggested-action {
 popover.background button.destructive-action, button.destructive-action {
   border: none;
   box-shadow: none;
-  color: white;
+  color: #fff;
   border-radius: 6px;
   background: linear-gradient(to right, #bf616a, #bf616a); }
+  popover.background button.destructive-action label, button.destructive-action label {
+    color: #fff; }
   popover.background button.destructive-action.flat, button.destructive-action.flat {
     box-shadow: none;
-    color: white;
+    color: #fff;
     border-radius: 6px;
     background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
+    popover.background button.destructive-action.flat label, button.destructive-action.flat label {
+      color: #fff; }
   popover.background button.destructive-action:hover, button.destructive-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
