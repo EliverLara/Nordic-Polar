@@ -351,7 +351,7 @@ popover.background.magnifier > contents, .osd {
     background-image: radial-gradient(farthest-side, #b4c7da 0%, rgba(180, 199, 218, 0) 0%); }
   to {
     background-image: radial-gradient(farthest-side, #b4c7da 95%, rgba(180, 199, 218, 0)); } }
-notebook > header > tabs > arrow, popover.background button,
+notebook > header > tabs > arrow, .sidebar-pane .top-bar popover.background button, .content-pane .top-bar popover.background button,
 button {
   min-height: 22px;
   min-width: 16px;
@@ -363,7 +363,7 @@ button {
   color: #d8dee9;
   background-color: #3c4454;
   text-shadow: none; }
-  notebook > header > tabs > arrow, popover.background button.flat,
+  notebook > header > tabs > arrow, .sidebar-pane .top-bar popover.background button.flat, .content-pane .top-bar popover.background button.flat,
   button.flat {
     border-color: transparent;
     background-color: transparent;
@@ -372,7 +372,7 @@ button {
     text-shadow: none;
     -gtk-icon-shadow: none;
     transition: none; }
-    notebook > header > tabs > arrow:hover, popover.background button.flat:hover,
+    notebook > header > tabs > arrow:hover, .sidebar-pane .top-bar popover.background button.flat:hover, .content-pane .top-bar popover.background button.flat:hover,
     button.flat:hover {
       transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
       transition-duration: 500ms;
@@ -380,17 +380,17 @@ button {
       outline-color: rgba(254, 254, 254, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      notebook > header > tabs > arrow:hover:active, popover.background button.flat:hover:active,
+      notebook > header > tabs > arrow:hover:active, .sidebar-pane .top-bar popover.background button.flat:hover:active, .content-pane .top-bar popover.background button.flat:hover:active,
       button.flat:hover:active {
         transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  notebook > header > tabs > arrow:hover, popover.background button:hover,
+  notebook > header > tabs > arrow:hover, .sidebar-pane .top-bar popover.background button:hover, .content-pane .top-bar popover.background button:hover,
   button:hover {
     color: #fefefe;
     outline-color: rgba(254, 254, 254, 0.3);
     background-color: #81a1c1;
     text-shadow: none;
     -gtk-icon-filter: brightness(1.2); }
-  notebook > header > tabs > arrow:active, notebook > header > tabs > arrow:checked, popover.background button:active, popover.background button:checked,
+  notebook > header > tabs > arrow:active, notebook > header > tabs > arrow:checked, .sidebar-pane .top-bar popover.background button:active, .content-pane .top-bar popover.background button:active, .sidebar-pane .top-bar popover.background button:checked, .content-pane .top-bar popover.background button:checked,
   button:active,
   button:checked {
     color: #fefefe;
@@ -398,7 +398,7 @@ button {
     background-color: #7094b9;
     text-shadow: none;
     transition-duration: 50ms; }
-  notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:backdrop, popover.background button:backdrop.flat, popover.background button:backdrop,
+  notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:backdrop, .sidebar-pane .top-bar popover.background button:backdrop.flat, .content-pane .top-bar popover.background button:backdrop.flat, .sidebar-pane .top-bar popover.background button:backdrop, .content-pane .top-bar popover.background button:backdrop,
   button:backdrop.flat,
   button:backdrop {
     color: #b9bfcb;
@@ -407,7 +407,7 @@ button {
     text-shadow: none;
     transition: 200ms ease-out;
     -gtk-icon-filter: none; }
-    notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, popover.background button:backdrop.flat:active, popover.background button:backdrop.flat:checked, popover.background button:backdrop:active, popover.background button:backdrop:checked,
+    notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, .sidebar-pane .top-bar popover.background button:backdrop.flat:active, .content-pane .top-bar popover.background button:backdrop.flat:active, .sidebar-pane .top-bar popover.background button:backdrop.flat:checked, .content-pane .top-bar popover.background button:backdrop.flat:checked, .sidebar-pane .top-bar popover.background button:backdrop:active, .content-pane .top-bar popover.background button:backdrop:active, .sidebar-pane .top-bar popover.background button:backdrop:checked, .content-pane .top-bar popover.background button:backdrop:checked,
     button:backdrop.flat:active,
     button:backdrop.flat:checked,
     button:backdrop:active,
@@ -416,20 +416,20 @@ button {
       outline-color: rgba(216, 222, 233, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, popover.background button:backdrop.flat:active label, popover.background button:backdrop.flat:checked label, popover.background button:backdrop:active label, popover.background button:backdrop:checked label,
+      notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, .sidebar-pane .top-bar popover.background button:backdrop.flat:active label, .content-pane .top-bar popover.background button:backdrop.flat:active label, .sidebar-pane .top-bar popover.background button:backdrop.flat:checked label, .content-pane .top-bar popover.background button:backdrop.flat:checked label, .sidebar-pane .top-bar popover.background button:backdrop:active label, .content-pane .top-bar popover.background button:backdrop:active label, .sidebar-pane .top-bar popover.background button:backdrop:checked label, .content-pane .top-bar popover.background button:backdrop:checked label,
       button:backdrop.flat:active label,
       button:backdrop.flat:checked label,
       button:backdrop:active label,
       button:backdrop:checked label {
         color: rgba(254, 254, 254, 0.7); }
-    notebook > header > tabs > arrow:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled, popover.background button:backdrop.flat:disabled, popover.background button:backdrop:disabled,
+    notebook > header > tabs > arrow:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled, .sidebar-pane .top-bar popover.background button:backdrop.flat:disabled, .content-pane .top-bar popover.background button:backdrop.flat:disabled, .sidebar-pane .top-bar popover.background button:backdrop:disabled, .content-pane .top-bar popover.background button:backdrop:disabled,
     button:backdrop.flat:disabled,
     button:backdrop:disabled {
       color: #b9bfcb;
       outline-color: rgba(216, 222, 233, 0.3);
       background-color: #404859;
       text-shadow: none; }
-      notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, popover.background button:backdrop.flat:disabled:active, popover.background button:backdrop.flat:disabled:checked, popover.background button:backdrop:disabled:active, popover.background button:backdrop:disabled:checked,
+      notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, .sidebar-pane .top-bar popover.background button:backdrop.flat:disabled:active, .content-pane .top-bar popover.background button:backdrop.flat:disabled:active, .sidebar-pane .top-bar popover.background button:backdrop.flat:disabled:checked, .content-pane .top-bar popover.background button:backdrop.flat:disabled:checked, .sidebar-pane .top-bar popover.background button:backdrop:disabled:active, .content-pane .top-bar popover.background button:backdrop:disabled:active, .sidebar-pane .top-bar popover.background button:backdrop:disabled:checked, .content-pane .top-bar popover.background button:backdrop:disabled:checked,
       button:backdrop.flat:disabled:active,
       button:backdrop.flat:disabled:checked,
       button:backdrop:disabled:active,
@@ -438,7 +438,7 @@ button {
         outline-color: rgba(216, 222, 233, 0.3);
         background-color: #81a1c1;
         text-shadow: none; }
-  notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:disabled, notebook > header > tabs > arrow:backdrop:disabled, popover.background button.flat:backdrop, popover.background button.flat:disabled, popover.background button.flat:backdrop:disabled,
+  notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:disabled, notebook > header > tabs > arrow:backdrop:disabled, .sidebar-pane .top-bar popover.background button.flat:backdrop, .content-pane .top-bar popover.background button.flat:backdrop, .sidebar-pane .top-bar popover.background button.flat:disabled, .content-pane .top-bar popover.background button.flat:disabled, .sidebar-pane .top-bar popover.background button.flat:backdrop:disabled, .content-pane .top-bar popover.background button.flat:backdrop:disabled,
   button.flat:backdrop,
   button.flat:disabled,
   button.flat:backdrop:disabled {
@@ -448,60 +448,60 @@ button {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  notebook > header > tabs > arrow:disabled, popover.background button:disabled,
+  notebook > header > tabs > arrow:disabled, .sidebar-pane .top-bar popover.background button:disabled, .content-pane .top-bar popover.background button:disabled,
   button:disabled {
     color: #b9bfcb;
     outline-color: rgba(216, 222, 233, 0.3);
     background-color: #404859;
     text-shadow: none; }
-    notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked, popover.background button:disabled:active, popover.background button:disabled:checked,
+    notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked, .sidebar-pane .top-bar popover.background button:disabled:active, .content-pane .top-bar popover.background button:disabled:active, .sidebar-pane .top-bar popover.background button:disabled:checked, .content-pane .top-bar popover.background button:disabled:checked,
     button:disabled:active,
     button:disabled:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(216, 222, 233, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      notebook > header > tabs > arrow:disabled:active label, notebook > header > tabs > arrow:disabled:checked label, popover.background button:disabled:active label, popover.background button:disabled:checked label,
+      notebook > header > tabs > arrow:disabled:active label, notebook > header > tabs > arrow:disabled:checked label, .sidebar-pane .top-bar popover.background button:disabled:active label, .content-pane .top-bar popover.background button:disabled:active label, .sidebar-pane .top-bar popover.background button:disabled:checked label, .content-pane .top-bar popover.background button:disabled:checked label,
       button:disabled:active label,
       button:disabled:checked label {
         color: rgba(254, 254, 254, 0.7); }
-  notebook > header > tabs > arrow.image-button, popover.background button.image-button,
+  notebook > header > tabs > arrow.image-button, .sidebar-pane .top-bar popover.background button.image-button, .content-pane .top-bar popover.background button.image-button,
   button.image-button {
     min-width: 24px;
     padding-left: 4px;
     padding-right: 4px; }
-  notebook > header > tabs > arrow.image-button.circular, notebook > header > tabs > arrow.image-button.sidebar-button, popover.background button.image-button.circular, popover.background button.image-button.sidebar-button,
+  notebook > header > tabs > arrow.image-button.circular, notebook > header > tabs > arrow.image-button.sidebar-button, .sidebar-pane .top-bar popover.background button.image-button.circular, .content-pane .top-bar popover.background button.image-button.circular, .sidebar-pane .top-bar popover.background button.image-button.sidebar-button, .content-pane .top-bar popover.background button.image-button.sidebar-button,
   button.image-button.circular,
   button.image-button.sidebar-button {
     padding: 6px 4px;
     border-radius: 50px;
     box-shadow: none; }
-  notebook > header > tabs > arrow.text-button, popover.background button.text-button,
+  notebook > header > tabs > arrow.text-button, .sidebar-pane .top-bar popover.background button.text-button, .content-pane .top-bar popover.background button.text-button,
   button.text-button {
     padding-left: 16px;
     padding-right: 16px; }
-  notebook > header > tabs > arrow.text-button.image-button, popover.background button.text-button.image-button,
+  notebook > header > tabs > arrow.text-button.image-button, .sidebar-pane .top-bar popover.background button.text-button.image-button, .content-pane .top-bar popover.background button.text-button.image-button,
   button.text-button.image-button {
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 6px; }
-    notebook > header > tabs > arrow.text-button.image-button label, popover.background button.text-button.image-button label,
+    notebook > header > tabs > arrow.text-button.image-button label, .sidebar-pane .top-bar popover.background button.text-button.image-button label, .content-pane .top-bar popover.background button.text-button.image-button label,
     button.text-button.image-button label {
       padding-left: 8px;
       padding-right: 8px; }
-  combobox:drop(active) button.combo, notebook > header > tabs > arrow:drop(active), popover.background button:drop(active),
+  combobox:drop(active) button.combo, notebook > header > tabs > arrow:drop(active), .sidebar-pane .top-bar popover.background button:drop(active), .content-pane .top-bar popover.background button:drop(active),
   button:drop(active) {
     color: #a3be8c;
     border-color: #a3be8c;
     box-shadow: inset 0 0 0 1px #a3be8c; }
-row:selected popover.background button.flat:not(:active):not(:checked):not(:hover):not(disabled), popover.background row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled),
+row:selected .sidebar-pane .top-bar popover.background button.flat:not(:active):not(:checked):not(:hover):not(disabled), .sidebar-pane .top-bar popover.background row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled), row:selected .content-pane .top-bar popover.background button.flat:not(:active):not(:checked):not(:hover):not(disabled), .content-pane .top-bar popover.background row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled),
 row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
   color: #fefefe;
   border-color: transparent; }
-  row:selected popover.background button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop, popover.background row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop,
+  row:selected .sidebar-pane .top-bar popover.background button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop, .sidebar-pane .top-bar popover.background row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop, row:selected .content-pane .top-bar popover.background button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop, .content-pane .top-bar popover.background row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop,
   row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop {
     color: #8e95a4; }
-popover.background button.osd,
+.sidebar-pane .top-bar popover.background button.osd, .content-pane .top-bar popover.background button.osd,
 button.osd {
   min-width: 24px;
   min-height: 20px;
@@ -517,10 +517,10 @@ button.osd {
   outline-color: rgba(216, 222, 233, 0.3);
   border: none;
   box-shadow: none; }
-  popover.background button.osd.image-button,
+  .sidebar-pane .top-bar popover.background button.osd.image-button, .content-pane .top-bar popover.background button.osd.image-button,
   button.osd.image-button {
     min-width: 32px; }
-  popover.background button.osd:hover,
+  .sidebar-pane .top-bar popover.background button.osd:hover, .content-pane .top-bar popover.background button.osd:hover,
   button.osd:hover {
     color: white;
     border-color: #1f232b;
@@ -531,7 +531,7 @@ button.osd {
     outline-color: rgba(216, 222, 233, 0.3);
     border: none;
     box-shadow: none; }
-  popover.background button.osd:active, popover.background button.osd:checked,
+  .sidebar-pane .top-bar popover.background button.osd:active, .content-pane .top-bar popover.background button.osd:active, .sidebar-pane .top-bar popover.background button.osd:checked, .content-pane .top-bar popover.background button.osd:checked,
   button.osd:active,
   button.osd:checked {
     color: white;
@@ -543,7 +543,7 @@ button.osd {
     outline-color: rgba(216, 222, 233, 0.3);
     border: none;
     box-shadow: none; }
-  popover.background button.osd:disabled:backdrop, popover.background button.osd:disabled,
+  .sidebar-pane .top-bar popover.background button.osd:disabled:backdrop, .content-pane .top-bar popover.background button.osd:disabled:backdrop, .sidebar-pane .top-bar popover.background button.osd:disabled, .content-pane .top-bar popover.background button.osd:disabled,
   button.osd:disabled:backdrop,
   button.osd:disabled {
     color: #808690;
@@ -554,7 +554,7 @@ button.osd {
     text-shadow: none;
     -gtk-icon-shadow: none;
     border: none; }
-  popover.background button.osd:backdrop,
+  .sidebar-pane .top-bar popover.background button.osd:backdrop, .content-pane .top-bar popover.background button.osd:backdrop,
   button.osd:backdrop {
     color: #d8dee9;
     border-color: #1f232b;
@@ -565,7 +565,7 @@ button.osd {
     -gtk-icon-shadow: none;
     border: none; }
 .app-notification button,
-.app-notification.frame button, popover.background.touch-selection button, popover.background.magnifier button, .osd popover.background button, popover.background .osd button,
+.app-notification.frame button, popover.background.touch-selection button, popover.background.magnifier button, .osd .sidebar-pane .top-bar popover.background button, .sidebar-pane .top-bar popover.background .osd button, .osd .content-pane .top-bar popover.background button, .content-pane .top-bar popover.background .osd button,
 .osd button {
   color: #d8dee9;
   border-color: #1f232b;
@@ -574,7 +574,7 @@ button.osd {
   text-shadow: 0 1px black;
   -gtk-icon-shadow: 0 1px black;
   outline-color: rgba(216, 222, 233, 0.3); }
-  .app-notification button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .osd popover.background button:hover, popover.background .osd button:hover,
+  .app-notification button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .osd .sidebar-pane .top-bar popover.background button:hover, .sidebar-pane .top-bar popover.background .osd button:hover, .osd .content-pane .top-bar popover.background button:hover, .content-pane .top-bar popover.background .osd button:hover,
   .osd button:hover {
     color: white;
     border-color: #1f232b;
@@ -583,7 +583,7 @@ button.osd {
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(216, 222, 233, 0.3); }
-  .app-notification button:active:backdrop, popover.background.touch-selection button:active:backdrop, popover.background.magnifier button:active:backdrop, .app-notification button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .app-notification button:checked:backdrop, popover.background.touch-selection button:checked:backdrop, popover.background.magnifier button:checked:backdrop, .app-notification button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .osd popover.background button:active:backdrop, popover.background .osd button:active:backdrop, .osd popover.background button:active, popover.background .osd button:active, .osd popover.background button:checked:backdrop, popover.background .osd button:checked:backdrop, .osd popover.background button:checked, popover.background .osd button:checked,
+  .app-notification button:active:backdrop, popover.background.touch-selection button:active:backdrop, popover.background.magnifier button:active:backdrop, .app-notification button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .app-notification button:checked:backdrop, popover.background.touch-selection button:checked:backdrop, popover.background.magnifier button:checked:backdrop, .app-notification button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .osd .sidebar-pane .top-bar popover.background button:active:backdrop, .sidebar-pane .top-bar popover.background .osd button:active:backdrop, .osd .content-pane .top-bar popover.background button:active:backdrop, .content-pane .top-bar popover.background .osd button:active:backdrop, .osd .sidebar-pane .top-bar popover.background button:active, .sidebar-pane .top-bar popover.background .osd button:active, .osd .content-pane .top-bar popover.background button:active, .content-pane .top-bar popover.background .osd button:active, .osd .sidebar-pane .top-bar popover.background button:checked:backdrop, .sidebar-pane .top-bar popover.background .osd button:checked:backdrop, .osd .content-pane .top-bar popover.background button:checked:backdrop, .content-pane .top-bar popover.background .osd button:checked:backdrop, .osd .sidebar-pane .top-bar popover.background button:checked, .sidebar-pane .top-bar popover.background .osd button:checked, .osd .content-pane .top-bar popover.background button:checked, .content-pane .top-bar popover.background .osd button:checked,
   .osd button:active:backdrop,
   .osd button:active,
   .osd button:checked:backdrop,
@@ -595,7 +595,7 @@ button.osd {
     text-shadow: none;
     -gtk-icon-shadow: none;
     outline-color: rgba(216, 222, 233, 0.3); }
-  .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .osd popover.background button:disabled:backdrop, popover.background .osd button:disabled:backdrop, .osd popover.background button:disabled, popover.background .osd button:disabled,
+  .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .osd .sidebar-pane .top-bar popover.background button:disabled:backdrop, .sidebar-pane .top-bar popover.background .osd button:disabled:backdrop, .osd .content-pane .top-bar popover.background button:disabled:backdrop, .content-pane .top-bar popover.background .osd button:disabled:backdrop, .osd .sidebar-pane .top-bar popover.background button:disabled, .sidebar-pane .top-bar popover.background .osd button:disabled, .osd .content-pane .top-bar popover.background button:disabled, .content-pane .top-bar popover.background .osd button:disabled,
   .osd button:disabled:backdrop,
   .osd button:disabled {
     color: #808690;
@@ -605,7 +605,7 @@ button.osd {
     box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  .app-notification button:backdrop, popover.background.touch-selection button:backdrop, popover.background.magnifier button:backdrop, .osd popover.background button:backdrop, popover.background .osd button:backdrop,
+  .app-notification button:backdrop, popover.background.touch-selection button:backdrop, popover.background.magnifier button:backdrop, .osd .sidebar-pane .top-bar popover.background button:backdrop, .sidebar-pane .top-bar popover.background .osd button:backdrop, .osd .content-pane .top-bar popover.background button:backdrop, .content-pane .top-bar popover.background .osd button:backdrop,
   .osd button:backdrop {
     color: #d8dee9;
     border-color: #1f232b;
@@ -614,7 +614,7 @@ button.osd {
     box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  .app-notification button.flat, popover.background.touch-selection button.flat, popover.background.magnifier button.flat, .osd popover.background button.flat, popover.background .osd button.flat,
+  .app-notification button.flat, popover.background.touch-selection button.flat, popover.background.magnifier button.flat, .osd .sidebar-pane .top-bar popover.background button.flat, .sidebar-pane .top-bar popover.background .osd button.flat, .osd .content-pane .top-bar popover.background button.flat, .content-pane .top-bar popover.background .osd button.flat,
   .osd button.flat {
     color: #d8dee9;
     border-color: #1f232b;
@@ -626,7 +626,7 @@ button.osd {
     box-shadow: none;
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black; }
-    .app-notification button.flat:hover, popover.background.touch-selection button.flat:hover, popover.background.magnifier button.flat:hover, .osd popover.background button.flat:hover, popover.background .osd button.flat:hover,
+    .app-notification button.flat:hover, popover.background.touch-selection button.flat:hover, popover.background.magnifier button.flat:hover, .osd .sidebar-pane .top-bar popover.background button.flat:hover, .sidebar-pane .top-bar popover.background .osd button.flat:hover, .osd .content-pane .top-bar popover.background button.flat:hover, .content-pane .top-bar popover.background .osd button.flat:hover,
     .osd button.flat:hover {
       color: white;
       border-color: #1f232b;
@@ -635,7 +635,7 @@ button.osd {
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .app-notification button.flat:disabled, popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled, .osd popover.background button.flat:disabled, popover.background .osd button.flat:disabled,
+    .app-notification button.flat:disabled, popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled, .osd .sidebar-pane .top-bar popover.background button.flat:disabled, .sidebar-pane .top-bar popover.background .osd button.flat:disabled, .osd .content-pane .top-bar popover.background button.flat:disabled, .content-pane .top-bar popover.background .osd button.flat:disabled,
     .osd button.flat:disabled {
       color: #808690;
       border-color: #1f232b;
@@ -647,7 +647,7 @@ button.osd {
       background-image: none;
       border-color: transparent;
       box-shadow: none; }
-    .app-notification button.flat:backdrop, popover.background.touch-selection button.flat:backdrop, popover.background.magnifier button.flat:backdrop, .osd popover.background button.flat:backdrop, popover.background .osd button.flat:backdrop,
+    .app-notification button.flat:backdrop, popover.background.touch-selection button.flat:backdrop, popover.background.magnifier button.flat:backdrop, .osd .sidebar-pane .top-bar popover.background button.flat:backdrop, .sidebar-pane .top-bar popover.background .osd button.flat:backdrop, .osd .content-pane .top-bar popover.background button.flat:backdrop, .content-pane .top-bar popover.background .osd button.flat:backdrop,
     .osd button.flat:backdrop {
       color: #d8dee9;
       border-color: #1f232b;
@@ -656,7 +656,7 @@ button.osd {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-    .app-notification button.flat:active, popover.background.touch-selection button.flat:active, popover.background.magnifier button.flat:active, .app-notification button.flat:checked, popover.background.touch-selection button.flat:checked, popover.background.magnifier button.flat:checked, .osd popover.background button.flat:active, popover.background .osd button.flat:active, .osd popover.background button.flat:checked, popover.background .osd button.flat:checked,
+    .app-notification button.flat:active, popover.background.touch-selection button.flat:active, popover.background.magnifier button.flat:active, .app-notification button.flat:checked, popover.background.touch-selection button.flat:checked, popover.background.magnifier button.flat:checked, .osd .sidebar-pane .top-bar popover.background button.flat:active, .sidebar-pane .top-bar popover.background .osd button.flat:active, .osd .content-pane .top-bar popover.background button.flat:active, .content-pane .top-bar popover.background .osd button.flat:active, .osd .sidebar-pane .top-bar popover.background button.flat:checked, .sidebar-pane .top-bar popover.background .osd button.flat:checked, .osd .content-pane .top-bar popover.background button.flat:checked, .content-pane .top-bar popover.background .osd button.flat:checked,
     .osd button.flat:active,
     .osd button.flat:checked {
       color: white;
@@ -666,59 +666,59 @@ button.osd {
       text-shadow: none;
       -gtk-icon-shadow: none;
       outline-color: rgba(216, 222, 233, 0.3); }
-popover.background button.suggested-action, button.suggested-action {
+.sidebar-pane .top-bar popover.background button.suggested-action, .content-pane .top-bar popover.background button.suggested-action, button.suggested-action {
   border: none;
   box-shadow: none;
   color: #fff;
   border-radius: 6px;
   background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
-  popover.background button.suggested-action label, button.suggested-action label {
+  .sidebar-pane .top-bar popover.background button.suggested-action label, .content-pane .top-bar popover.background button.suggested-action label, button.suggested-action label {
     color: #fff; }
-  popover.background button.suggested-action.flat, .selection-mode windowcontrols button, button.suggested-action.flat {
+  .sidebar-pane .top-bar popover.background button.suggested-action.flat, .content-pane .top-bar popover.background button.suggested-action.flat, .selection-mode windowcontrols button, button.suggested-action.flat {
     box-shadow: none;
     color: #fff;
     border-radius: 6px;
     background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
-    popover.background button.suggested-action.flat label, .selection-mode windowcontrols button label, button.suggested-action.flat label {
+    .sidebar-pane .top-bar popover.background button.suggested-action.flat label, .content-pane .top-bar popover.background button.suggested-action.flat label, .selection-mode windowcontrols button label, button.suggested-action.flat label {
       color: #fff; }
-  popover.background button.suggested-action:hover, button.suggested-action:hover {
+  .sidebar-pane .top-bar popover.background button.suggested-action:hover, .content-pane .top-bar popover.background button.suggested-action:hover, button.suggested-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
     text-shadow: none;
     opacity: 0.85; }
-  popover.background button.suggested-action:active, popover.background button.suggested-action:checked, button.suggested-action:active, button.suggested-action:checked {
+  .sidebar-pane .top-bar popover.background button.suggested-action:active, .content-pane .top-bar popover.background button.suggested-action:active, .sidebar-pane .top-bar popover.background button.suggested-action:checked, .content-pane .top-bar popover.background button.suggested-action:checked, button.suggested-action:active, button.suggested-action:checked {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
     text-shadow: none; }
-  popover.background button.suggested-action:backdrop, popover.background button.suggested-action.flat:backdrop, .selection-mode windowcontrols button:backdrop, button.suggested-action:backdrop, button.suggested-action.flat:backdrop {
+  .sidebar-pane .top-bar popover.background button.suggested-action:backdrop, .content-pane .top-bar popover.background button.suggested-action:backdrop, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop, .selection-mode windowcontrols button:backdrop, button.suggested-action:backdrop, button.suggested-action.flat:backdrop {
     color: rgba(255, 255, 255, 0.4);
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
     text-shadow: none; }
-    popover.background button.suggested-action:backdrop label, popover.background button.suggested-action.flat:backdrop label, .selection-mode windowcontrols button:backdrop label, button.suggested-action:backdrop label, button.suggested-action.flat:backdrop label {
+    .sidebar-pane .top-bar popover.background button.suggested-action:backdrop label, .content-pane .top-bar popover.background button.suggested-action:backdrop label, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop label, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop label, .selection-mode windowcontrols button:backdrop label, button.suggested-action:backdrop label, button.suggested-action.flat:backdrop label {
       color: rgba(255, 255, 255, 0.5); }
-    popover.background button.suggested-action:backdrop:active, popover.background button.suggested-action:backdrop:checked, popover.background button.suggested-action.flat:backdrop:active, .selection-mode windowcontrols button:backdrop:active, popover.background button.suggested-action.flat:backdrop:checked, .selection-mode windowcontrols button:backdrop:checked, button.suggested-action:backdrop:active, button.suggested-action:backdrop:checked, button.suggested-action.flat:backdrop:active, button.suggested-action.flat:backdrop:checked {
+    .sidebar-pane .top-bar popover.background button.suggested-action:backdrop:active, .content-pane .top-bar popover.background button.suggested-action:backdrop:active, .sidebar-pane .top-bar popover.background button.suggested-action:backdrop:checked, .content-pane .top-bar popover.background button.suggested-action:backdrop:checked, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:active, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:active, .selection-mode windowcontrols button:backdrop:active, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:checked, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:checked, .selection-mode windowcontrols button:backdrop:checked, button.suggested-action:backdrop:active, button.suggested-action:backdrop:checked, button.suggested-action.flat:backdrop:active, button.suggested-action.flat:backdrop:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      popover.background button.suggested-action:backdrop:active label, popover.background button.suggested-action:backdrop:checked label, popover.background button.suggested-action.flat:backdrop:active label, .selection-mode windowcontrols button:backdrop:active label, popover.background button.suggested-action.flat:backdrop:checked label, .selection-mode windowcontrols button:backdrop:checked label, button.suggested-action:backdrop:active label, button.suggested-action:backdrop:checked label, button.suggested-action.flat:backdrop:active label, button.suggested-action.flat:backdrop:checked label {
+      .sidebar-pane .top-bar popover.background button.suggested-action:backdrop:active label, .content-pane .top-bar popover.background button.suggested-action:backdrop:active label, .sidebar-pane .top-bar popover.background button.suggested-action:backdrop:checked label, .content-pane .top-bar popover.background button.suggested-action:backdrop:checked label, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:active label, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:active label, .selection-mode windowcontrols button:backdrop:active label, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:checked label, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:checked label, .selection-mode windowcontrols button:backdrop:checked label, button.suggested-action:backdrop:active label, button.suggested-action:backdrop:checked label, button.suggested-action.flat:backdrop:active label, button.suggested-action.flat:backdrop:checked label {
         color: rgba(254, 254, 254, 0.7); }
-    popover.background button.suggested-action:backdrop:disabled, popover.background button.suggested-action.flat:backdrop:disabled, .selection-mode windowcontrols button:backdrop:disabled, button.suggested-action:backdrop:disabled, button.suggested-action.flat:backdrop:disabled {
+    .sidebar-pane .top-bar popover.background button.suggested-action:backdrop:disabled, .content-pane .top-bar popover.background button.suggested-action:backdrop:disabled, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled, .selection-mode windowcontrols button:backdrop:disabled, button.suggested-action:backdrop:disabled, button.suggested-action.flat:backdrop:disabled {
       color: white;
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #88c0d0;
       text-shadow: none; }
-      popover.background button.suggested-action:backdrop:disabled label, popover.background button.suggested-action.flat:backdrop:disabled label, .selection-mode windowcontrols button:backdrop:disabled label, button.suggested-action:backdrop:disabled label, button.suggested-action.flat:backdrop:disabled label {
+      .sidebar-pane .top-bar popover.background button.suggested-action:backdrop:disabled label, .content-pane .top-bar popover.background button.suggested-action:backdrop:disabled label, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled label, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled label, .selection-mode windowcontrols button:backdrop:disabled label, button.suggested-action:backdrop:disabled label, button.suggested-action.flat:backdrop:disabled label {
         color: rgba(255, 255, 255, 0.5); }
-      popover.background button.suggested-action:backdrop:disabled:active, popover.background button.suggested-action:backdrop:disabled:checked, popover.background button.suggested-action.flat:backdrop:disabled:active, .selection-mode windowcontrols button:backdrop:disabled:active, popover.background button.suggested-action.flat:backdrop:disabled:checked, .selection-mode windowcontrols button:backdrop:disabled:checked, button.suggested-action:backdrop:disabled:active, button.suggested-action:backdrop:disabled:checked, button.suggested-action.flat:backdrop:disabled:active, button.suggested-action.flat:backdrop:disabled:checked {
+      .sidebar-pane .top-bar popover.background button.suggested-action:backdrop:disabled:active, .content-pane .top-bar popover.background button.suggested-action:backdrop:disabled:active, .sidebar-pane .top-bar popover.background button.suggested-action:backdrop:disabled:checked, .content-pane .top-bar popover.background button.suggested-action:backdrop:disabled:checked, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled:active, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled:active, .selection-mode windowcontrols button:backdrop:disabled:active, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled:checked, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled:checked, .selection-mode windowcontrols button:backdrop:disabled:checked, button.suggested-action:backdrop:disabled:active, button.suggested-action:backdrop:disabled:checked, button.suggested-action.flat:backdrop:disabled:active, button.suggested-action.flat:backdrop:disabled:checked {
         color: rgba(254, 254, 254, 0.7);
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #81a1c1;
         text-shadow: none; }
-  popover.background button.suggested-action.flat:backdrop, .selection-mode windowcontrols button:backdrop, popover.background button.suggested-action.flat:disabled, .selection-mode windowcontrols button:disabled, popover.background button.suggested-action.flat:backdrop:disabled, .selection-mode windowcontrols button:backdrop:disabled, button.suggested-action.flat:backdrop, button.suggested-action.flat:disabled, button.suggested-action.flat:backdrop:disabled {
+  .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop, .selection-mode windowcontrols button:backdrop, .sidebar-pane .top-bar popover.background button.suggested-action.flat:disabled, .content-pane .top-bar popover.background button.suggested-action.flat:disabled, .selection-mode windowcontrols button:disabled, .sidebar-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled, .content-pane .top-bar popover.background button.suggested-action.flat:backdrop:disabled, .selection-mode windowcontrols button:backdrop:disabled, button.suggested-action.flat:backdrop, button.suggested-action.flat:disabled, button.suggested-action.flat:backdrop:disabled {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
@@ -726,20 +726,20 @@ popover.background button.suggested-action, button.suggested-action {
     text-shadow: none;
     -gtk-icon-shadow: none;
     color: rgba(136, 192, 208, 0.8); }
-  popover.background button.suggested-action:disabled, button.suggested-action:disabled {
+  .sidebar-pane .top-bar popover.background button.suggested-action:disabled, .content-pane .top-bar popover.background button.suggested-action:disabled, button.suggested-action:disabled {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #88c0d0;
     text-shadow: none;
     opacity: 0.75; }
-    popover.background button.suggested-action:disabled:active, popover.background button.suggested-action:disabled:checked, button.suggested-action:disabled:active, button.suggested-action:disabled:checked {
+    .sidebar-pane .top-bar popover.background button.suggested-action:disabled:active, .content-pane .top-bar popover.background button.suggested-action:disabled:active, .sidebar-pane .top-bar popover.background button.suggested-action:disabled:checked, .content-pane .top-bar popover.background button.suggested-action:disabled:checked, button.suggested-action:disabled:active, button.suggested-action:disabled:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #88c0d0;
       text-shadow: none; }
-      popover.background button.suggested-action:disabled:active label, popover.background button.suggested-action:disabled:checked label, button.suggested-action:disabled:active label, button.suggested-action:disabled:checked label {
+      .sidebar-pane .top-bar popover.background button.suggested-action:disabled:active label, .content-pane .top-bar popover.background button.suggested-action:disabled:active label, .sidebar-pane .top-bar popover.background button.suggested-action:disabled:checked label, .content-pane .top-bar popover.background button.suggested-action:disabled:checked label, button.suggested-action:disabled:active label, button.suggested-action:disabled:checked label {
         color: rgba(254, 254, 254, 0.7); }
-  .osd popover.background button.suggested-action, popover.background .osd button.suggested-action, .osd button.suggested-action {
+  .osd .sidebar-pane .top-bar popover.background button.suggested-action, .sidebar-pane .top-bar popover.background .osd button.suggested-action, .osd .content-pane .top-bar popover.background button.suggested-action, .content-pane .top-bar popover.background .osd button.suggested-action, .osd button.suggested-action {
     color: #d8dee9;
     border-color: #1f232b;
     background-color: rgba(136, 192, 208, 0.5);
@@ -747,7 +747,7 @@ popover.background button.suggested-action, button.suggested-action {
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(216, 222, 233, 0.3); }
-    .osd popover.background button.suggested-action:hover, popover.background .osd button.suggested-action:hover, .osd button.suggested-action:hover {
+    .osd .sidebar-pane .top-bar popover.background button.suggested-action:hover, .sidebar-pane .top-bar popover.background .osd button.suggested-action:hover, .osd .content-pane .top-bar popover.background button.suggested-action:hover, .content-pane .top-bar popover.background .osd button.suggested-action:hover, .osd button.suggested-action:hover {
       color: white;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(136, 192, 208, 0.7), rgba(136, 192, 208, 0.7));
@@ -755,7 +755,7 @@ popover.background button.suggested-action, button.suggested-action {
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .osd popover.background button.suggested-action:active:backdrop, popover.background .osd button.suggested-action:active:backdrop, .osd popover.background button.suggested-action:active, popover.background .osd button.suggested-action:active, .osd popover.background button.suggested-action:checked:backdrop, popover.background .osd button.suggested-action:checked:backdrop, .osd popover.background button.suggested-action:checked, popover.background .osd button.suggested-action:checked, .osd button.suggested-action:active:backdrop, .osd button.suggested-action:active, .osd button.suggested-action:checked:backdrop, .osd button.suggested-action:checked {
+    .osd .sidebar-pane .top-bar popover.background button.suggested-action:active:backdrop, .sidebar-pane .top-bar popover.background .osd button.suggested-action:active:backdrop, .osd .content-pane .top-bar popover.background button.suggested-action:active:backdrop, .content-pane .top-bar popover.background .osd button.suggested-action:active:backdrop, .osd .sidebar-pane .top-bar popover.background button.suggested-action:active, .sidebar-pane .top-bar popover.background .osd button.suggested-action:active, .osd .content-pane .top-bar popover.background button.suggested-action:active, .content-pane .top-bar popover.background .osd button.suggested-action:active, .osd .sidebar-pane .top-bar popover.background button.suggested-action:checked:backdrop, .sidebar-pane .top-bar popover.background .osd button.suggested-action:checked:backdrop, .osd .content-pane .top-bar popover.background button.suggested-action:checked:backdrop, .content-pane .top-bar popover.background .osd button.suggested-action:checked:backdrop, .osd .sidebar-pane .top-bar popover.background button.suggested-action:checked, .sidebar-pane .top-bar popover.background .osd button.suggested-action:checked, .osd .content-pane .top-bar popover.background button.suggested-action:checked, .content-pane .top-bar popover.background .osd button.suggested-action:checked, .osd button.suggested-action:active:backdrop, .osd button.suggested-action:active, .osd button.suggested-action:checked:backdrop, .osd button.suggested-action:checked {
       color: white;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, #88c0d0, #88c0d0);
@@ -763,7 +763,7 @@ popover.background button.suggested-action, button.suggested-action {
       text-shadow: none;
       -gtk-icon-shadow: none;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .osd popover.background button.suggested-action:disabled:backdrop, popover.background .osd button.suggested-action:disabled:backdrop, .osd popover.background button.suggested-action:disabled, popover.background .osd button.suggested-action:disabled, .osd button.suggested-action:disabled:backdrop, .osd button.suggested-action:disabled {
+    .osd .sidebar-pane .top-bar popover.background button.suggested-action:disabled:backdrop, .sidebar-pane .top-bar popover.background .osd button.suggested-action:disabled:backdrop, .osd .content-pane .top-bar popover.background button.suggested-action:disabled:backdrop, .content-pane .top-bar popover.background .osd button.suggested-action:disabled:backdrop, .osd .sidebar-pane .top-bar popover.background button.suggested-action:disabled, .sidebar-pane .top-bar popover.background .osd button.suggested-action:disabled, .osd .content-pane .top-bar popover.background button.suggested-action:disabled, .content-pane .top-bar popover.background .osd button.suggested-action:disabled, .osd button.suggested-action:disabled:backdrop, .osd button.suggested-action:disabled {
       color: #808690;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(58, 63, 73, 0.5), rgba(58, 63, 73, 0.5));
@@ -771,7 +771,7 @@ popover.background button.suggested-action, button.suggested-action {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-    .osd popover.background button.suggested-action:backdrop, popover.background .osd button.suggested-action:backdrop, .osd button.suggested-action:backdrop {
+    .osd .sidebar-pane .top-bar popover.background button.suggested-action:backdrop, .sidebar-pane .top-bar popover.background .osd button.suggested-action:backdrop, .osd .content-pane .top-bar popover.background button.suggested-action:backdrop, .content-pane .top-bar popover.background .osd button.suggested-action:backdrop, .osd button.suggested-action:backdrop {
       color: #d8dee9;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(136, 192, 208, 0.5), rgba(136, 192, 208, 0.5));
@@ -779,59 +779,59 @@ popover.background button.suggested-action, button.suggested-action {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-popover.background button.destructive-action, button.destructive-action {
+.sidebar-pane .top-bar popover.background button.destructive-action, .content-pane .top-bar popover.background button.destructive-action, button.destructive-action {
   border: none;
   box-shadow: none;
   color: #fff;
   border-radius: 6px;
   background: linear-gradient(to right, #bf616a, #bf616a); }
-  popover.background button.destructive-action label, button.destructive-action label {
+  .sidebar-pane .top-bar popover.background button.destructive-action label, .content-pane .top-bar popover.background button.destructive-action label, button.destructive-action label {
     color: #fff; }
-  popover.background button.destructive-action.flat, button.destructive-action.flat {
+  .sidebar-pane .top-bar popover.background button.destructive-action.flat, .content-pane .top-bar popover.background button.destructive-action.flat, button.destructive-action.flat {
     box-shadow: none;
     color: #fff;
     border-radius: 6px;
     background: linear-gradient(to right, #88c0d0 0%, #88c0d0 100%); }
-    popover.background button.destructive-action.flat label, button.destructive-action.flat label {
+    .sidebar-pane .top-bar popover.background button.destructive-action.flat label, .content-pane .top-bar popover.background button.destructive-action.flat label, button.destructive-action.flat label {
       color: #fff; }
-  popover.background button.destructive-action:hover, button.destructive-action:hover {
+  .sidebar-pane .top-bar popover.background button.destructive-action:hover, .content-pane .top-bar popover.background button.destructive-action:hover, button.destructive-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
     text-shadow: none;
     opacity: 0.85; }
-  popover.background button.destructive-action:active, popover.background button.destructive-action:checked, button.destructive-action:active, button.destructive-action:checked {
+  .sidebar-pane .top-bar popover.background button.destructive-action:active, .content-pane .top-bar popover.background button.destructive-action:active, .sidebar-pane .top-bar popover.background button.destructive-action:checked, .content-pane .top-bar popover.background button.destructive-action:checked, button.destructive-action:active, button.destructive-action:checked {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
     text-shadow: none; }
-  popover.background button.destructive-action:backdrop, popover.background button.destructive-action.flat:backdrop, button.destructive-action:backdrop, button.destructive-action.flat:backdrop {
+  .sidebar-pane .top-bar popover.background button.destructive-action:backdrop, .content-pane .top-bar popover.background button.destructive-action:backdrop, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop, button.destructive-action:backdrop, button.destructive-action.flat:backdrop {
     color: rgba(255, 255, 255, 0.4);
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
     text-shadow: none; }
-    popover.background button.destructive-action:backdrop label, popover.background button.destructive-action.flat:backdrop label, button.destructive-action:backdrop label, button.destructive-action.flat:backdrop label {
+    .sidebar-pane .top-bar popover.background button.destructive-action:backdrop label, .content-pane .top-bar popover.background button.destructive-action:backdrop label, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop label, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop label, button.destructive-action:backdrop label, button.destructive-action.flat:backdrop label {
       color: rgba(255, 255, 255, 0.5); }
-    popover.background button.destructive-action:backdrop:active, popover.background button.destructive-action:backdrop:checked, popover.background button.destructive-action.flat:backdrop:active, popover.background button.destructive-action.flat:backdrop:checked, button.destructive-action:backdrop:active, button.destructive-action:backdrop:checked, button.destructive-action.flat:backdrop:active, button.destructive-action.flat:backdrop:checked {
+    .sidebar-pane .top-bar popover.background button.destructive-action:backdrop:active, .content-pane .top-bar popover.background button.destructive-action:backdrop:active, .sidebar-pane .top-bar popover.background button.destructive-action:backdrop:checked, .content-pane .top-bar popover.background button.destructive-action:backdrop:checked, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:active, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:active, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:checked, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:checked, button.destructive-action:backdrop:active, button.destructive-action:backdrop:checked, button.destructive-action.flat:backdrop:active, button.destructive-action.flat:backdrop:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #81a1c1;
       text-shadow: none; }
-      popover.background button.destructive-action:backdrop:active label, popover.background button.destructive-action:backdrop:checked label, popover.background button.destructive-action.flat:backdrop:active label, popover.background button.destructive-action.flat:backdrop:checked label, button.destructive-action:backdrop:active label, button.destructive-action:backdrop:checked label, button.destructive-action.flat:backdrop:active label, button.destructive-action.flat:backdrop:checked label {
+      .sidebar-pane .top-bar popover.background button.destructive-action:backdrop:active label, .content-pane .top-bar popover.background button.destructive-action:backdrop:active label, .sidebar-pane .top-bar popover.background button.destructive-action:backdrop:checked label, .content-pane .top-bar popover.background button.destructive-action:backdrop:checked label, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:active label, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:active label, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:checked label, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:checked label, button.destructive-action:backdrop:active label, button.destructive-action:backdrop:checked label, button.destructive-action.flat:backdrop:active label, button.destructive-action.flat:backdrop:checked label {
         color: rgba(254, 254, 254, 0.7); }
-    popover.background button.destructive-action:backdrop:disabled, popover.background button.destructive-action.flat:backdrop:disabled, button.destructive-action:backdrop:disabled, button.destructive-action.flat:backdrop:disabled {
+    .sidebar-pane .top-bar popover.background button.destructive-action:backdrop:disabled, .content-pane .top-bar popover.background button.destructive-action:backdrop:disabled, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled, button.destructive-action:backdrop:disabled, button.destructive-action.flat:backdrop:disabled {
       color: white;
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #a9444e;
       text-shadow: none; }
-      popover.background button.destructive-action:backdrop:disabled label, popover.background button.destructive-action.flat:backdrop:disabled label, button.destructive-action:backdrop:disabled label, button.destructive-action.flat:backdrop:disabled label {
+      .sidebar-pane .top-bar popover.background button.destructive-action:backdrop:disabled label, .content-pane .top-bar popover.background button.destructive-action:backdrop:disabled label, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled label, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled label, button.destructive-action:backdrop:disabled label, button.destructive-action.flat:backdrop:disabled label {
         color: rgba(255, 255, 255, 0.5); }
-      popover.background button.destructive-action:backdrop:disabled:active, popover.background button.destructive-action:backdrop:disabled:checked, popover.background button.destructive-action.flat:backdrop:disabled:active, popover.background button.destructive-action.flat:backdrop:disabled:checked, button.destructive-action:backdrop:disabled:active, button.destructive-action:backdrop:disabled:checked, button.destructive-action.flat:backdrop:disabled:active, button.destructive-action.flat:backdrop:disabled:checked {
+      .sidebar-pane .top-bar popover.background button.destructive-action:backdrop:disabled:active, .content-pane .top-bar popover.background button.destructive-action:backdrop:disabled:active, .sidebar-pane .top-bar popover.background button.destructive-action:backdrop:disabled:checked, .content-pane .top-bar popover.background button.destructive-action:backdrop:disabled:checked, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled:active, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled:active, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled:checked, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled:checked, button.destructive-action:backdrop:disabled:active, button.destructive-action:backdrop:disabled:checked, button.destructive-action.flat:backdrop:disabled:active, button.destructive-action.flat:backdrop:disabled:checked {
         color: rgba(254, 254, 254, 0.7);
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #81a1c1;
         text-shadow: none; }
-  popover.background button.destructive-action.flat:backdrop, popover.background button.destructive-action.flat:disabled, popover.background button.destructive-action.flat:backdrop:disabled, button.destructive-action.flat:backdrop, button.destructive-action.flat:disabled, button.destructive-action.flat:backdrop:disabled {
+  .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop, .sidebar-pane .top-bar popover.background button.destructive-action.flat:disabled, .content-pane .top-bar popover.background button.destructive-action.flat:disabled, .sidebar-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled, .content-pane .top-bar popover.background button.destructive-action.flat:backdrop:disabled, button.destructive-action.flat:backdrop, button.destructive-action.flat:disabled, button.destructive-action.flat:backdrop:disabled {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
@@ -839,20 +839,20 @@ popover.background button.destructive-action, button.destructive-action {
     text-shadow: none;
     -gtk-icon-shadow: none;
     color: rgba(169, 68, 78, 0.8); }
-  popover.background button.destructive-action:disabled, button.destructive-action:disabled {
+  .sidebar-pane .top-bar popover.background button.destructive-action:disabled, .content-pane .top-bar popover.background button.destructive-action:disabled, button.destructive-action:disabled {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #a9444e;
     text-shadow: none;
     opacity: 0.75; }
-    popover.background button.destructive-action:disabled:active, popover.background button.destructive-action:disabled:checked, button.destructive-action:disabled:active, button.destructive-action:disabled:checked {
+    .sidebar-pane .top-bar popover.background button.destructive-action:disabled:active, .content-pane .top-bar popover.background button.destructive-action:disabled:active, .sidebar-pane .top-bar popover.background button.destructive-action:disabled:checked, .content-pane .top-bar popover.background button.destructive-action:disabled:checked, button.destructive-action:disabled:active, button.destructive-action:disabled:checked {
       color: rgba(254, 254, 254, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #a9444e;
       text-shadow: none; }
-      popover.background button.destructive-action:disabled:active label, popover.background button.destructive-action:disabled:checked label, button.destructive-action:disabled:active label, button.destructive-action:disabled:checked label {
+      .sidebar-pane .top-bar popover.background button.destructive-action:disabled:active label, .content-pane .top-bar popover.background button.destructive-action:disabled:active label, .sidebar-pane .top-bar popover.background button.destructive-action:disabled:checked label, .content-pane .top-bar popover.background button.destructive-action:disabled:checked label, button.destructive-action:disabled:active label, button.destructive-action:disabled:checked label {
         color: rgba(254, 254, 254, 0.7); }
-  .osd popover.background button.destructive-action, popover.background .osd button.destructive-action, .osd button.destructive-action {
+  .osd .sidebar-pane .top-bar popover.background button.destructive-action, .sidebar-pane .top-bar popover.background .osd button.destructive-action, .osd .content-pane .top-bar popover.background button.destructive-action, .content-pane .top-bar popover.background .osd button.destructive-action, .osd button.destructive-action {
     color: #d8dee9;
     border-color: #1f232b;
     background-color: rgba(169, 68, 78, 0.5);
@@ -860,7 +860,7 @@ popover.background button.destructive-action, button.destructive-action {
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(216, 222, 233, 0.3); }
-    .osd popover.background button.destructive-action:hover, popover.background .osd button.destructive-action:hover, .osd button.destructive-action:hover {
+    .osd .sidebar-pane .top-bar popover.background button.destructive-action:hover, .sidebar-pane .top-bar popover.background .osd button.destructive-action:hover, .osd .content-pane .top-bar popover.background button.destructive-action:hover, .content-pane .top-bar popover.background .osd button.destructive-action:hover, .osd button.destructive-action:hover {
       color: white;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(169, 68, 78, 0.7), rgba(169, 68, 78, 0.7));
@@ -868,7 +868,7 @@ popover.background button.destructive-action, button.destructive-action {
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .osd popover.background button.destructive-action:active:backdrop, popover.background .osd button.destructive-action:active:backdrop, .osd popover.background button.destructive-action:active, popover.background .osd button.destructive-action:active, .osd popover.background button.destructive-action:checked:backdrop, popover.background .osd button.destructive-action:checked:backdrop, .osd popover.background button.destructive-action:checked, popover.background .osd button.destructive-action:checked, .osd button.destructive-action:active:backdrop, .osd button.destructive-action:active, .osd button.destructive-action:checked:backdrop, .osd button.destructive-action:checked {
+    .osd .sidebar-pane .top-bar popover.background button.destructive-action:active:backdrop, .sidebar-pane .top-bar popover.background .osd button.destructive-action:active:backdrop, .osd .content-pane .top-bar popover.background button.destructive-action:active:backdrop, .content-pane .top-bar popover.background .osd button.destructive-action:active:backdrop, .osd .sidebar-pane .top-bar popover.background button.destructive-action:active, .sidebar-pane .top-bar popover.background .osd button.destructive-action:active, .osd .content-pane .top-bar popover.background button.destructive-action:active, .content-pane .top-bar popover.background .osd button.destructive-action:active, .osd .sidebar-pane .top-bar popover.background button.destructive-action:checked:backdrop, .sidebar-pane .top-bar popover.background .osd button.destructive-action:checked:backdrop, .osd .content-pane .top-bar popover.background button.destructive-action:checked:backdrop, .content-pane .top-bar popover.background .osd button.destructive-action:checked:backdrop, .osd .sidebar-pane .top-bar popover.background button.destructive-action:checked, .sidebar-pane .top-bar popover.background .osd button.destructive-action:checked, .osd .content-pane .top-bar popover.background button.destructive-action:checked, .content-pane .top-bar popover.background .osd button.destructive-action:checked, .osd button.destructive-action:active:backdrop, .osd button.destructive-action:active, .osd button.destructive-action:checked:backdrop, .osd button.destructive-action:checked {
       color: white;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, #a9444e, #a9444e);
@@ -876,7 +876,7 @@ popover.background button.destructive-action, button.destructive-action {
       text-shadow: none;
       -gtk-icon-shadow: none;
       outline-color: rgba(216, 222, 233, 0.3); }
-    .osd popover.background button.destructive-action:disabled:backdrop, popover.background .osd button.destructive-action:disabled:backdrop, .osd popover.background button.destructive-action:disabled, popover.background .osd button.destructive-action:disabled, .osd button.destructive-action:disabled:backdrop, .osd button.destructive-action:disabled {
+    .osd .sidebar-pane .top-bar popover.background button.destructive-action:disabled:backdrop, .sidebar-pane .top-bar popover.background .osd button.destructive-action:disabled:backdrop, .osd .content-pane .top-bar popover.background button.destructive-action:disabled:backdrop, .content-pane .top-bar popover.background .osd button.destructive-action:disabled:backdrop, .osd .sidebar-pane .top-bar popover.background button.destructive-action:disabled, .sidebar-pane .top-bar popover.background .osd button.destructive-action:disabled, .osd .content-pane .top-bar popover.background button.destructive-action:disabled, .content-pane .top-bar popover.background .osd button.destructive-action:disabled, .osd button.destructive-action:disabled:backdrop, .osd button.destructive-action:disabled {
       color: #808690;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(58, 63, 73, 0.5), rgba(58, 63, 73, 0.5));
@@ -884,7 +884,7 @@ popover.background button.destructive-action, button.destructive-action {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-    .osd popover.background button.destructive-action:backdrop, popover.background .osd button.destructive-action:backdrop, .osd button.destructive-action:backdrop {
+    .osd .sidebar-pane .top-bar popover.background button.destructive-action:backdrop, .sidebar-pane .top-bar popover.background .osd button.destructive-action:backdrop, .osd .content-pane .top-bar popover.background button.destructive-action:backdrop, .content-pane .top-bar popover.background .osd button.destructive-action:backdrop, .osd button.destructive-action:backdrop {
       color: #d8dee9;
       border-color: #1f232b;
       background-image: linear-gradient(to bottom, rgba(169, 68, 78, 0.5), rgba(169, 68, 78, 0.5));
@@ -892,42 +892,45 @@ popover.background button.destructive-action, button.destructive-action {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-popover.background .stack-switcher > button, .stack-switcher > button {
+.sidebar-pane .top-bar popover.background .stack-switcher > button, .content-pane .top-bar popover.background .stack-switcher > button, .stack-switcher > button {
   outline-offset: -3px; }
-  popover.background .stack-switcher > button > label, .stack-switcher > button > label {
+  .sidebar-pane .top-bar popover.background .stack-switcher > button > label, .content-pane .top-bar popover.background .stack-switcher > button > label, .stack-switcher > button > label {
     padding-left: 6px;
     padding-right: 6px; }
-  popover.background .stack-switcher > button > image, .stack-switcher > button > image {
+  .sidebar-pane .top-bar popover.background .stack-switcher > button > image, .content-pane .top-bar popover.background .stack-switcher > button > image, .stack-switcher > button > image {
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 3px;
     padding-bottom: 3px; }
-  popover.background .stack-switcher > button.text-button, .stack-switcher > button.text-button {
+  .sidebar-pane .top-bar popover.background .stack-switcher > button.text-button, .content-pane .top-bar popover.background .stack-switcher > button.text-button, .stack-switcher > button.text-button {
     padding-left: 10px;
     padding-right: 10px; }
-  popover.background .stack-switcher > button.image-button, .stack-switcher > button.image-button {
+  .sidebar-pane .top-bar popover.background .stack-switcher > button.image-button, .content-pane .top-bar popover.background .stack-switcher > button.image-button, .stack-switcher > button.image-button {
     padding-left: 2px;
     padding-right: 2px; }
-  popover.background .stack-switcher > button.needs-attention:active > label,
-  popover.background .stack-switcher > button.needs-attention:active > image, popover.background .stack-switcher > button.needs-attention:checked > label,
-  popover.background .stack-switcher > button.needs-attention:checked > image, .stack-switcher > button.needs-attention:active > label,
+  .sidebar-pane .top-bar popover.background .stack-switcher > button.needs-attention:active > label, .content-pane .top-bar popover.background .stack-switcher > button.needs-attention:active > label,
+  .sidebar-pane .top-bar popover.background .stack-switcher > button.needs-attention:active > image,
+  .content-pane .top-bar popover.background .stack-switcher > button.needs-attention:active > image, .sidebar-pane .top-bar popover.background .stack-switcher > button.needs-attention:checked > label, .content-pane .top-bar popover.background .stack-switcher > button.needs-attention:checked > label,
+  .sidebar-pane .top-bar popover.background .stack-switcher > button.needs-attention:checked > image,
+  .content-pane .top-bar popover.background .stack-switcher > button.needs-attention:checked > image, .stack-switcher > button.needs-attention:active > label,
   .stack-switcher > button.needs-attention:active > image, .stack-switcher > button.needs-attention:checked > label,
   .stack-switcher > button.needs-attention:checked > image {
     animation: none;
     background-image: none; }
-.inline-toolbar popover.background button, popover.background .inline-toolbar button, .inline-toolbar popover.background button:backdrop, popover.background .inline-toolbar button:backdrop, .inline-toolbar button, .inline-toolbar button:backdrop {
+.inline-toolbar .sidebar-pane .top-bar popover.background button, .sidebar-pane .top-bar popover.background .inline-toolbar button, .inline-toolbar .content-pane .top-bar popover.background button, .content-pane .top-bar popover.background .inline-toolbar button, .inline-toolbar .sidebar-pane .top-bar popover.background button:backdrop, .sidebar-pane .top-bar popover.background .inline-toolbar button:backdrop, .inline-toolbar .content-pane .top-bar popover.background button:backdrop, .content-pane .top-bar popover.background .inline-toolbar button:backdrop, .inline-toolbar button, .inline-toolbar button:backdrop {
   border-radius: 6px;
   border-width: 1px; }
-.primary-toolbar popover.background button, popover.background .primary-toolbar button, .primary-toolbar .raised popover.background button, popover.background .primary-toolbar .raised button, .primary-toolbar button, .primary-toolbar .raised button {
+.primary-toolbar .sidebar-pane .top-bar popover.background button, .sidebar-pane .top-bar popover.background .primary-toolbar button, .primary-toolbar .content-pane .top-bar popover.background button, .content-pane .top-bar popover.background .primary-toolbar button, .primary-toolbar .raised .sidebar-pane .top-bar popover.background button, .sidebar-pane .top-bar popover.background .primary-toolbar .raised button, .primary-toolbar .raised .content-pane .top-bar popover.background button, .content-pane .top-bar popover.background .primary-toolbar .raised button, .primary-toolbar button, .primary-toolbar .raised button {
   -gtk-icon-shadow: none; }
-  .primary-toolbar popover.background button:hover, popover.background .primary-toolbar button:hover, .primary-toolbar popover.background button:focus, popover.background .primary-toolbar button:focus, .primary-toolbar .raised popover.background button:hover, popover.background .primary-toolbar .raised button:hover, .primary-toolbar .raised popover.background button:focus, popover.background .primary-toolbar .raised button:focus, .primary-toolbar button:hover, .primary-toolbar button:focus, .primary-toolbar .raised button:hover, .primary-toolbar .raised button:focus {
+  .primary-toolbar .sidebar-pane .top-bar popover.background button:hover, .sidebar-pane .top-bar popover.background .primary-toolbar button:hover, .primary-toolbar .content-pane .top-bar popover.background button:hover, .content-pane .top-bar popover.background .primary-toolbar button:hover, .primary-toolbar .sidebar-pane .top-bar popover.background button:focus, .sidebar-pane .top-bar popover.background .primary-toolbar button:focus, .primary-toolbar .content-pane .top-bar popover.background button:focus, .content-pane .top-bar popover.background .primary-toolbar button:focus, .primary-toolbar .raised .sidebar-pane .top-bar popover.background button:hover, .sidebar-pane .top-bar popover.background .primary-toolbar .raised button:hover, .primary-toolbar .raised .content-pane .top-bar popover.background button:hover, .content-pane .top-bar popover.background .primary-toolbar .raised button:hover, .primary-toolbar .raised .sidebar-pane .top-bar popover.background button:focus, .sidebar-pane .top-bar popover.background .primary-toolbar .raised button:focus, .primary-toolbar .raised .content-pane .top-bar popover.background button:focus, .content-pane .top-bar popover.background .primary-toolbar .raised button:focus, .primary-toolbar button:hover, .primary-toolbar button:focus, .primary-toolbar .raised button:hover, .primary-toolbar .raised button:focus {
     color: #fefefe;
     outline-color: rgba(254, 254, 254, 0.3);
     background-color: #81a1c1;
     text-shadow: none; }
 
-popover.background .stack-switcher > button.needs-attention > label,
-popover.background .stack-switcher > button.needs-attention > image, .stack-switcher > button.needs-attention > label,
+.sidebar-pane .top-bar popover.background .stack-switcher > button.needs-attention > label, .content-pane .top-bar popover.background .stack-switcher > button.needs-attention > label,
+.sidebar-pane .top-bar popover.background .stack-switcher > button.needs-attention > image,
+.content-pane .top-bar popover.background .stack-switcher > button.needs-attention > image, .stack-switcher > button.needs-attention > label,
 .stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label {
   animation: needs_attention 150ms ease-in;
   background-image: radial-gradient(farthest-side, #b4c7da 96%, rgba(180, 199, 218, 0));
@@ -998,13 +1001,13 @@ popover.background .stack-switcher > button.needs-attention > image, .stack-swit
   .toolbar :not(.linked) > combobox > box > button:disabled {
     opacity: 0.5; }
 
-.inline-toolbar popover.background button, popover.background .inline-toolbar button, .inline-toolbar popover.background button:backdrop, popover.background .inline-toolbar button:backdrop, .inline-toolbar button, .inline-toolbar button:backdrop, popover.background .linked > button, popover.background .linked > button:hover, popover.background .linked > button:active, popover.background .linked > button:checked, popover.background .linked > button:backdrop, .linked > button, .linked > button:hover, .linked > button:active, .linked > button:checked, .linked > button:backdrop, .linked:not(.vertical) > spinbutton:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text, .linked:not(.vertical) >
+.inline-toolbar .sidebar-pane .top-bar popover.background button, .sidebar-pane .top-bar popover.background .inline-toolbar button, .inline-toolbar .content-pane .top-bar popover.background button, .content-pane .top-bar popover.background .inline-toolbar button, .inline-toolbar button, .inline-toolbar button:backdrop, .sidebar-pane .top-bar popover.background .linked > button, .content-pane .top-bar popover.background .linked > button, .linked > button, .linked > button:hover, .linked > button:active, .linked > button:checked, .linked > button:backdrop, .linked:not(.vertical) > spinbutton:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text, .linked:not(.vertical) >
 entry, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
   border: 1px solid #262a34;
   border-radius: 0;
   border-right-style: none;
   box-shadow: none; }
-  .inline-toolbar button:disabled, popover.background .linked > button:disabled, .linked > button:disabled, .linked:not(.vertical) > spinbutton:disabled:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text:disabled, .linked:not(.vertical) >
+  .inline-toolbar .sidebar-pane .top-bar popover.background button:disabled, .sidebar-pane .top-bar popover.background .inline-toolbar button:disabled, .inline-toolbar .content-pane .top-bar popover.background button:disabled, .content-pane .top-bar popover.background .inline-toolbar button:disabled, .inline-toolbar button:disabled, .sidebar-pane .top-bar popover.background .linked > button:disabled, .content-pane .top-bar popover.background .linked > button:disabled, .linked > button:disabled, .linked:not(.vertical) > spinbutton:disabled:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text:disabled, .linked:not(.vertical) >
   entry:disabled, .linked > combobox > box > button.combo:disabled:dir(ltr), .linked > combobox > box > button.combo:disabled:dir(rtl) {
     color: #b9bfcb;
     outline-color: rgba(216, 222, 233, 0.3);
@@ -1012,35 +1015,35 @@ entry, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > bo
     text-shadow: none;
     color: #8e95a4; }
 
-.inline-toolbar button:first-child, popover.background .linked > button:first-child, .linked > button:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .linked:not(.vertical) > spinbutton:first-child:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text:first-child, .linked:not(.vertical) >
+.inline-toolbar .sidebar-pane .top-bar popover.background button:first-child, .sidebar-pane .top-bar popover.background .inline-toolbar button:first-child, .inline-toolbar .content-pane .top-bar popover.background button:first-child, .content-pane .top-bar popover.background .inline-toolbar button:first-child, .inline-toolbar button:first-child, .sidebar-pane .top-bar popover.background .linked > button:first-child, .content-pane .top-bar popover.background .linked > button:first-child, .linked > button:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .linked:not(.vertical) > spinbutton:first-child:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text:first-child, .linked:not(.vertical) >
 entry:first-child {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px; }
-.inline-toolbar button:last-child, popover.background .linked > button:last-child, .linked > button:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .linked:not(.vertical) > spinbutton:last-child:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text:last-child, .linked:not(.vertical) >
+.inline-toolbar .sidebar-pane .top-bar popover.background button:last-child, .sidebar-pane .top-bar popover.background .inline-toolbar button:last-child, .inline-toolbar .content-pane .top-bar popover.background button:last-child, .content-pane .top-bar popover.background .inline-toolbar button:last-child, .inline-toolbar button:last-child, .sidebar-pane .top-bar popover.background .linked > button:last-child, .content-pane .top-bar popover.background .linked > button:last-child, .linked > button:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .linked:not(.vertical) > spinbutton:last-child:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text:last-child, .linked:not(.vertical) >
 entry:last-child {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-right-style: solid; }
-.inline-toolbar button:only-child, popover.background .linked > button:only-child, .linked > button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo, .linked:not(.vertical) > spinbutton:only-child:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text:only-child, .linked:not(.vertical) >
+.inline-toolbar .sidebar-pane .top-bar popover.background button:only-child, .sidebar-pane .top-bar popover.background .inline-toolbar button:only-child, .inline-toolbar .content-pane .top-bar popover.background button:only-child, .content-pane .top-bar popover.background .inline-toolbar button:only-child, .inline-toolbar button:only-child, .sidebar-pane .top-bar popover.background .linked > button:only-child, .content-pane .top-bar popover.background .linked > button:only-child, .linked > button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo, .linked:not(.vertical) > spinbutton:only-child:not(.vertical), spinbutton.vertical.linked:not(.vertical) > text:only-child, .linked:not(.vertical) >
 entry:only-child {
   border-radius: 6px;
   border-style: solid; }
 
-popover.background .linked.vertical > button, popover.background .linked.vertical > button:hover, popover.background .linked.vertical > button:active, popover.background .linked.vertical > button:checked, popover.background .linked.vertical > button:backdrop, .linked.vertical > button, .linked.vertical > button:hover, .linked.vertical > button:active, .linked.vertical > button:checked, .linked.vertical > button:backdrop, .linked.vertical > spinbutton:not(.vertical), spinbutton.vertical.linked > text, .linked.vertical >
+.sidebar-pane .top-bar popover.background .linked.vertical > button, .content-pane .top-bar popover.background .linked.vertical > button, .linked.vertical > button, .linked.vertical > button:hover, .linked.vertical > button:active, .linked.vertical > button:checked, .linked.vertical > button:backdrop, .linked.vertical > spinbutton:not(.vertical), spinbutton.vertical.linked > text, .linked.vertical >
 entry, .linked.vertical > combobox > box > button.combo {
   border-style: solid solid none solid;
   border-radius: 0; }
 
-popover.background .linked.vertical > button:first-child, .linked.vertical > button:first-child, .linked.vertical > combobox:first-child > box > button.combo, .linked.vertical > spinbutton:first-child:not(.vertical), spinbutton.vertical.linked > text:first-child, .linked.vertical >
+.sidebar-pane .top-bar popover.background .linked.vertical > button:first-child, .content-pane .top-bar popover.background .linked.vertical > button:first-child, .linked.vertical > button:first-child, .linked.vertical > combobox:first-child > box > button.combo, .linked.vertical > spinbutton:first-child:not(.vertical), spinbutton.vertical.linked > text:first-child, .linked.vertical >
 entry:first-child {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px; }
-popover.background .linked.vertical > button:last-child, .linked.vertical > button:last-child, .linked.vertical > combobox:last-child > box > button.combo, .linked.vertical > spinbutton:last-child:not(.vertical), spinbutton.vertical.linked > text:last-child, .linked.vertical >
+.sidebar-pane .top-bar popover.background .linked.vertical > button:last-child, .content-pane .top-bar popover.background .linked.vertical > button:last-child, .linked.vertical > button:last-child, .linked.vertical > combobox:last-child > box > button.combo, .linked.vertical > spinbutton:last-child:not(.vertical), spinbutton.vertical.linked > text:last-child, .linked.vertical >
 entry:last-child {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   border-style: solid; }
-popover.background .linked.vertical > button:only-child, .linked.vertical > button:only-child, .linked.vertical > combobox:only-child > box > button.combo, .linked.vertical > spinbutton:only-child:not(.vertical), spinbutton.vertical.linked > text:only-child, .linked.vertical >
+.sidebar-pane .top-bar popover.background .linked.vertical > button:only-child, .content-pane .top-bar popover.background .linked.vertical > button:only-child, .linked.vertical > button:only-child, .linked.vertical > combobox:only-child > box > button.combo, .linked.vertical > spinbutton:only-child:not(.vertical), spinbutton.vertical.linked > text:only-child, .linked.vertical >
 entry:only-child {
   border-radius: 6px;
   border-style: solid; }
@@ -1112,20 +1115,26 @@ toggle-group {
       toggle-group toggle:checked, toggle-group toggle:checked label {
         color: #fefefe; }
 
-button.accent-button, button.accent-button:backdrop {
+/*
+  * Gnome 48 accent color buttons
+  * Gnome papers - buttons in context menu
+*/
+button.accent-button, button.accent-button:backdrop, button.color-button, button.color-button:backdrop {
   min-height: 24px;
   min-width: 24px;
-  padding: 5px;
+  padding: 3px;
   border-radius: 100%;
   background: var(--accent-bg-color);
   outline: none;
   background-clip: content-box;
   box-shadow: none;
   border: none; }
-button.accent-button:hover {
-  box-shadow: 0 0 0 3px #2c313d; }
-button.accent-button:checked, button.accent-button:checked:backdrop {
-  box-shadow: 0 0 0 3px var(--accent-bg-color); }
+button.accent-button:hover, button.color-button:hover {
+  box-shadow: 0 0 0 3px #303643;
+  background-color: var(--accent-bg-color); }
+button.accent-button:checked, button.accent-button:checked:backdrop, button.color-button:checked, button.color-button:checked:backdrop {
+  box-shadow: 0 0 0 3px var(--accent-bg-color);
+  background-color: var(--accent-bg-color); }
 
 /************
  * Calendar *
