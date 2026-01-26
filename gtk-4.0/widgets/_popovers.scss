@@ -18,8 +18,6 @@
     color: $fg_color;
   }
 
-  button { @extend %button; }
-
   &:backdrop {
     background-color: transparent;
     box-shadow: none;

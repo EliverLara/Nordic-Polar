@@ -258,6 +258,9 @@ headerbar {
     &, headerbar {
       background-color: $headerbar_color;
     }
+
+    // buttons in nautilus search popover
+    popover.background button { @extend %button; }
   }
 }
 
