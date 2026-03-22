@@ -1477,6 +1477,8 @@ $slider_size: 19px;
     transition-duration: 200ms;
   }
 
+  &:focus { box-shadow: 0px 0px 2px 2px $selected_bg_color inset !important; }
+
   &:active,
   &:checked {
     background-color: transparentize(darken($osd_bg_color, 10%), .1);
@@ -1595,6 +1597,8 @@ $slider_size: 19px;
     border-image: none;
     background-image: none;
   }
+
+  &:focus { box-shadow: 0px 0px 2px 2px $selected_bg_color inset !important; }
 
   &:active,
   &:checked {
