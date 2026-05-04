@@ -29,7 +29,7 @@
 }
 
 // Nautilus, filechooser path-bar
-#NautilusPathBar, .pathbar {
+#NautilusPathBar, .pathbar, .nautilus-pathbar {
   @include button(normal-header);
 
   .dim-label {
